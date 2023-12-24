@@ -19,6 +19,66 @@ npm install gcp-pac --save-dev
 pulumi preview --policy-pack ./node_modules/gcp-pac
 ```
 
+Will output something like this:
+
+```bash
+Loading policy packs...
+
+     Type                     Name                  Plan       Info
+     pulumi:pulumi:Stack      my-stack             
+ ~   └─ gcp:cloudrun:Service  default               update     [diff: ~metadata,template]
+
+Policies:
+    ⚠️ gcp@v1.0.0 (local: node_modules/gcp-pac)
+        - [advisory]  cloudrun-disallow-public-ingress  (gcp:cloudrun/service:Service: default)
+          Check that CloudRun services do not have public ingress set to 'all'.
+          CloudRun services should not have public ingress set to 'all'. Use a load balancer instead.
+```
+
+Override `enforcementLevel` to `mandatory` to fail the preview if the policy is not met. First, create a `json` file for specific ploicies:
+
+```json
+{
+  "cloudrun-disallow-public-ingress": "mandatory"
+}
+```
+
+or, for all policies:
+
+```json
+{
+  "all": "mandatory"
+}
+```
+
+which will fail the preview if any policy is not met:
+
+```bash
+Loading policy packs...
+
+     Type                     Name                  Plan       Info
+     pulumi:pulumi:Stack      my-stack             1 error
+ ~   └─ gcp:cloudrun:Service  default               update     [diff: ~metadata,template]
+
+Policies:
+    ❌ gcp@v1.0.0 (local: node_modules/gcp-pac)
+        - [mandatory]  cloudrun-disallow-public-ingress  (gcp:cloudrun/service:Service: default)
+          Check that CloudRun services do not have public ingress set to 'all'.
+          CloudRun services should not have public ingress set to 'all'. Use a load balancer instead.
+
+Diagnostics:
+  pulumi:pulumi:Stack (my-stack):
+    error: preview failed
+```
+
+For more information, see [Enforcement Leve](https://www.pulumi.com/docs/using-pulumi/crossguard/configuration/#enforcement-level) from Pulumi documentation.
+
+Then, run the following command:
+
+```bash
+pulumi preview --policy-pack ./node_modules/gcp-pac --policy-pack-config policy.json
+```
+
 ## Issues, Features, Feedback
 
 Your input matters. Feel free to open [issues](https://github.com/losisin/gcp-pac/issues) for bugs, feature requests, or any feedback you may have. Check if a similar issue exists before creating a new one, and please use clear titles and explanations to help understand your point better. Your thoughts help me improve this project!

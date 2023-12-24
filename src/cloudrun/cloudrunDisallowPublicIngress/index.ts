@@ -3,7 +3,7 @@ import { ResourceValidationArgs, ReportViolation, EnforcementLevel } from "@pulu
 export const cloudrunDisallowPublicIngress = {
 	name: "cloudrun-disallow-public-ingress",
 	description: "Check that CloudRun services do not have public ingress set to 'all'.",
-	enforcementLevel: "mandatory" as EnforcementLevel,
+	enforcementLevel: "advisory" as EnforcementLevel,
 	validateResource: (args: ResourceValidationArgs, reportViolation: ReportViolation) => {
 		if (args.type === "gcp:cloudrun/service:Service") {
 			const annotations = args.props.metadata?.annotations;
