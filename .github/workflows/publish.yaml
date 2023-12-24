@@ -1,6 +1,9 @@
 name: publish
 
 on:
+  pull_request:
+    branches:
+      - main
   release:
     types: [published]
 
@@ -27,6 +30,10 @@ jobs:
         id: npm-build
         run: npm run bundle
 
-      - run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      - name: Publish to NPM
+        id: npm-publish
+        uses: JS-DevTools/npm-publish@v3
+        with:
+          token: ${{secrets.NPM_TOKEN}}
+          package: dist
+          dry-run: true
