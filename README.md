@@ -2,8 +2,8 @@
 
 [![CI](https://github.com/losisin/gcp-pac/actions/workflows/ci.yaml/badge.svg?branch=main)](https://github.com/losisin/gcp-pac/actions/workflows/ci.yaml)
 [![Static Badge](https://img.shields.io/badge/license-Apache%20V2-blue.svg)](https://github.com/losisin/gcp-pac/blob/main/LICENSE)
-<!-- [![NPM total downloads](https://img.shields.io/npm/dt/gcp-pac.svg?style=flat)] -->
 [![NPM version](https://img.shields.io/npm/v/gcp-pac.svg?style=flat)]
+<!-- [![NPM total downloads](https://img.shields.io/npm/dt/gcp-pac.svg?style=flat)] -->
 
 GCP Policy as Code (gcp-pac) for your Pulumi typescript apps.
 
@@ -51,6 +51,12 @@ or, for all policies:
 }
 ```
 
+Then, run the following command:
+
+```bash
+pulumi preview --policy-pack ./node_modules/gcp-pac --policy-pack-config policy.json
+```
+
 which will fail the preview if any policy is not met:
 
 ```bash
@@ -72,12 +78,6 @@ Diagnostics:
 ```
 
 For more information, see [Enforcement Leve](https://www.pulumi.com/docs/using-pulumi/crossguard/configuration/#enforcement-level) from Pulumi documentation.
-
-Then, run the following command:
-
-```bash
-pulumi preview --policy-pack ./node_modules/gcp-pac --policy-pack-config policy.json
-```
 
 ## Issues, Features, Feedback
 
