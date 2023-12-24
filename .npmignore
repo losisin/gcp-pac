@@ -1,0 +1,9 @@
+.github/
+node_modules/
+src/
+scripts/
+.eslintignore
+.gitignore
+.prettierignore
+.prettierrc.json
+tsconfig.json

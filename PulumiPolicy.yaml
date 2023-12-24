@@ -1,0 +1,4 @@
+name: gcp
+runtime: nodejs
+description: A set of policies for GCP
+version: VERSION
