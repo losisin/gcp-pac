@@ -1,4 +1,4 @@
-name: gcp
+name: gcp-pac
 runtime: nodejs
 description: A set of policies for GCP
 version: VERSION

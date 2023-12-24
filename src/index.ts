@@ -4,6 +4,6 @@ import { computePolicies } from './compute'
 
 const allPolicies = [...cloudRunPolicies, ...computePolicies]
 
-export const policies = new PolicyPack('gcp', {
+export const policies = new PolicyPack('gcp-pac', {
   policies: allPolicies
 })

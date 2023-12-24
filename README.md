@@ -29,7 +29,7 @@ Loading policy packs...
  ~   └─ gcp:cloudrun:Service  default               update     [diff: ~metadata,template]
 
 Policies:
-    ⚠️ gcp@v1.0.0 (local: node_modules/gcp-pac)
+    ⚠️ gcp-pac@v1.0.0 (local: node_modules/gcp-pac)
         - [advisory]  cloudrun-disallow-public-ingress  (gcp:cloudrun/service:Service: default)
           Check that CloudRun services do not have public ingress set to 'all'.
           CloudRun services should not have public ingress set to 'all'. Use a load balancer instead.
@@ -61,7 +61,7 @@ Loading policy packs...
  ~   └─ gcp:cloudrun:Service  default               update     [diff: ~metadata,template]
 
 Policies:
-    ❌ gcp@v1.0.0 (local: node_modules/gcp-pac)
+    ❌ gcp-pac@v1.0.0 (local: node_modules/gcp-pac)
         - [mandatory]  cloudrun-disallow-public-ingress  (gcp:cloudrun/service:Service: default)
           Check that CloudRun services do not have public ingress set to 'all'.
           CloudRun services should not have public ingress set to 'all'. Use a load balancer instead.
