@@ -1,9 +1,6 @@
 name: publish
 
 on:
-  pull_request:
-    branches:
-      - main
   release:
     types: [published]
 
@@ -26,7 +23,7 @@ jobs:
         id: npm-ci
         run: npm ci
 
-      - name: Build DIST
+      - name: Build dist
         id: npm-build
         run: npm run bundle
 
@@ -36,4 +33,3 @@ jobs:
         with:
           token: ${{secrets.NPM_TOKEN}}
           package: dist
-          dry-run: true
