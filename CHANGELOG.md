@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Chaged
+
+- Update README.md (#2).
+
+## [1.0.0] - 2023-12-25
+
 ### Added
 
 - Publish `gcp-pac` to NPM registry (#1).
