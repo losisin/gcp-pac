@@ -16,6 +16,7 @@ function main() {
     fs.writeFileSync("dist/PulumiPolicy.yaml", dump(yaml), "utf-8");
 
     fs.copyFileSync(".npmignore", "dist/.npmignore");
+    fs.copyFileSync("README.md", "dist/README.md");
     fs.copyFileSync("LICENSE", "dist/LICENSE");
 }
 

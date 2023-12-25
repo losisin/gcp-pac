@@ -2,10 +2,12 @@
 
 [![CI](https://github.com/losisin/gcp-pac/actions/workflows/ci.yaml/badge.svg?branch=main)](https://github.com/losisin/gcp-pac/actions/workflows/ci.yaml)
 [![Static Badge](https://img.shields.io/badge/license-Apache%20V2-blue.svg)](https://github.com/losisin/gcp-pac/blob/main/LICENSE)
-[![NPM version](https://img.shields.io/npm/v/gcp-pac.svg?style=flat)]
+[![npm](https://img.shields.io/npm/v/gcp-pac)](https://www.npmjs.com/package/gcp-pac)
 <!-- [![NPM total downloads](https://img.shields.io/npm/dt/gcp-pac.svg?style=flat)] -->
 
-GCP Policy as Code (gcp-pac) for your Pulumi typescript apps.
+This NPM package offers a growing collection of policies specifically tailored for Pulumi TypeScript applications on Google Cloud Platform (GCP). Created to simplify Policy As Code implementation, these policies cater to various operational needs encountered in day-to-day cloud infrastructure management.
+
+Explore an expanding set of policies designed to enhance security, ensure compliance, and optimize efficiency within your Pulumi TypeScript workflows on GCP.
 
 ## Installation
 
