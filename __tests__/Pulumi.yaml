@@ -1,0 +1,5 @@
+name: gcp-pac
+runtime: nodejs
+description: A set of policies for GCP
+backend:
+  url: gs://gcp-pac
