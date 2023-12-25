@@ -1,0 +1,14 @@
+{
+    "name": "gcp-pac",
+    "main": "index.ts",
+    "scripts": {
+        "test": "pulumi preview --stack dev --policy-pack ../dist/ --policy-pack-config policy.json --suppress-outputs --color always"
+    },
+    "dependencies": {
+        "@pulumi/pulumi": "^3.0.0",
+        "@pulumi/gcp": "^7.0.0"
+    },
+    "devDependencies": {
+        "@types/node": "^18"
+    }
+}

@@ -38,3 +38,28 @@ jobs:
       - name: Lint
         id: npm-lint
         run: npm run lint
+
+      - name: GCP login
+        id: auth
+        uses: google-github-actions/auth@v2
+        with:
+          token_format: access_token
+          workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ secrets.GCP_VIEWER_SA }}
+
+      - name: Run bundle
+        id: npm-bundle
+        run: npm run bundle
+
+      - name: Install test dependencies
+        id: npm-test-deps
+        working-directory: ./__tests__
+        run: npm ci
+
+      - name: Test
+        id: npm-test
+        working-directory: ./__tests__
+        run: |
+          pulumi login gs://gcp-pac
+          npm run test
+          pulumi logout
