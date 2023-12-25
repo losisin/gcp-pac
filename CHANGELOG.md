@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Add `gcp:compute:BackendService` policy (#3).
+- Add integration tests (#3).
+
 ### Chaged
 
 - Update README.md (#2).
