@@ -1,45 +1,41 @@
 name: CI
-
 on:
   pull_request:
-  push:
     branches:
       - main
       - 'releases/*'
-
 permissions:
   contents: read
   id-token: write
+env:
+  PULUMI_CONFIG_PASSPHRASE: ${{ secrets.PULUMI_CONFIG_PASSPHRASE}}
+concurrency:
+  group: ${{ github.event.pull_request.number }}
+  cancel-in-progress: true
 
 jobs:
   test:
     name: Lint and test
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         id: checkout
         uses: actions/checkout@v4
-
       - name: Setup Node.js
         id: setup-node
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
-
       - name: Install Dependencies
         id: npm-ci
         run: npm ci
-
       - name: Check Format
         id: npm-format-check
         run: npm run format:check
-
       - name: Lint
         id: npm-lint
         run: npm run lint
-
       - name: GCP login
         id: auth
         uses: google-github-actions/auth@v2
@@ -47,16 +43,13 @@ jobs:
           token_format: access_token
           workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}
           service_account: ${{ secrets.GCP_VIEWER_SA }}
-
       - name: Run bundle
         id: npm-bundle
         run: npm run bundle
-
       - name: Install test dependencies
         id: npm-test-deps
         working-directory: ./__tests__
         run: npm ci
-
       - name: Test
         id: npm-test
         working-directory: ./__tests__
