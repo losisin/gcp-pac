@@ -3,7 +3,7 @@
 [![CI](https://github.com/losisin/gcp-pac/actions/workflows/ci.yaml/badge.svg?branch=main)](https://github.com/losisin/gcp-pac/actions/workflows/ci.yaml)
 [![Static Badge](https://img.shields.io/badge/license-Apache%20V2-blue.svg)](https://github.com/losisin/gcp-pac/blob/main/LICENSE)
 [![npm](https://img.shields.io/npm/v/gcp-pac)](https://www.npmjs.com/package/gcp-pac)
-<!-- [![NPM total downloads](https://img.shields.io/npm/dt/gcp-pac.svg?style=flat)] -->
+[![NPM total downloads](https://img.shields.io/npm/dt/gcp-pac.svg?style=flat)](https://www.npmjs.com/package/gcp-pac)
 
 This NPM package offers a growing collection of policies specifically tailored for Pulumi TypeScript applications on Google Cloud Platform (GCP). Created to simplify Policy As Code implementation, these policies cater to various operational needs encountered in day-to-day cloud infrastructure management.
 
