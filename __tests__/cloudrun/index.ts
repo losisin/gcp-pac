@@ -1,1 +1,1 @@
-export * as cloudrunService from "./cloudrunService"
+export * as cloudrunService from "./disallowPublicIngress"

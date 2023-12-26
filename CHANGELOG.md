@@ -13,6 +13,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - dependabot npm scan (#4).
 - `cloudrunv2-disallow-public-ingress` (#5).
 
+### Changed
+
+- Update test and code file structure (#6).
+
+### Fixed
+
+- codeql event on push in main branch (#6).
+
 ## [1.1.0] - 2023-12-25
 
 ### Added

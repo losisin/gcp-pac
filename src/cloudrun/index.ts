@@ -1,5 +1,5 @@
-import { cloudrunDisallowPublicIngress } from "./cloudrunDisallowPublicIngress";
+import { disallowPublicIngress } from "./disallowPublicIngress";
 
 export const cloudrunPolicies = [
-	cloudrunDisallowPublicIngress,
+	disallowPublicIngress,
 ];

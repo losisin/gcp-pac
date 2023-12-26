@@ -1,6 +1,6 @@
 import { ResourceValidationArgs, ReportViolation, EnforcementLevel } from "@pulumi/policy";
 
-export const cloudrunDisallowPublicIngress = {
+export const disallowPublicIngress = {
 	name: "cloudrun-disallow-public-ingress",
 	description: "Check that CloudRun services do not have public ingress set to 'all'.",
 	enforcementLevel: "advisory" as EnforcementLevel,
