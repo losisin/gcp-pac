@@ -1,1 +1,1 @@
-export * as cloudRunService from "./cloudrunService"
+export * as cloudrunService from "./cloudrunService"
