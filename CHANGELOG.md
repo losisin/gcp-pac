@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - CodeQL analysis (#4).
 - dependabot npm scan (#4).
 - `cloudrunv2-disallow-public-ingress` (#5).
+- disallow environment variables from Secret Manager - `cloudrun.Service`, `cloudrunv2.Service` and `cloudrunv2.Job` (#6).
 
 ### Changed
 
