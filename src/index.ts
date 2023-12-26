@@ -1,8 +1,13 @@
 import { PolicyPack } from '@pulumi/policy'
-import { cloudRunPolicies } from './cloudrun'
+import { cloudrunPolicies } from './cloudrun'
+import { cloudrunv2Policies } from './cloudrunv2'
 import { computePolicies } from './compute'
 
-const allPolicies = [...cloudRunPolicies, ...computePolicies]
+const allPolicies = [
+  ...cloudrunPolicies,
+  ...cloudrunv2Policies,
+  ...computePolicies
+]
 
 export const policies = new PolicyPack('gcp-pac', {
   policies: allPolicies

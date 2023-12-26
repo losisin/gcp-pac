@@ -9,8 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Add CodeQL analysis (#4).
-- Add dependabot npm scan (#4).
+- CodeQL analysis (#4).
+- dependabot npm scan (#4).
+- `cloudrunv2-disallow-public-ingress` (#5).
 
 ## [1.1.0] - 2023-12-25
 
