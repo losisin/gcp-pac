@@ -1,4 +1,4 @@
-// import { disallowEndOfLifeRuntime } from "./disallowEndOfLifeRuntime";
+import { disallowEndOfLifeRuntime } from "./disallowEndOfLifeRuntime";
 import { disallowEnvsSecrets } from "./disallowEnvsSecrets";
 import { disallowPlainHttp } from "./disallowPlainHttp";
 import { disallowPublicIngress } from "./disallowPublicIngress";
@@ -6,7 +6,7 @@ import { disallowVpcConnectorPublicEgress } from "./disallowVpcConnectorPublicEg
 import { requireCmek } from "./requireCmek";
 
 export const cloudfunctionsPolicies = [
-    // disallowEndOfLifeRuntime,
+    disallowEndOfLifeRuntime,
 	disallowEnvsSecrets,
 	disallowPlainHttp,
 	disallowPublicIngress,
