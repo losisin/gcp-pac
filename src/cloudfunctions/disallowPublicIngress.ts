@@ -7,7 +7,8 @@ export const disallowPublicIngress = {
 	validateResource: (args: ResourceValidationArgs, reportViolation: ReportViolation) => {
 		if (args.type === "gcp:cloudfunctions/function:Function") {
             const ingress = args.props.ingressSettings;
-            if (ingress && ingress === "ALLOW_ALL") {
+			const trigger = args.props.triggerHttp;
+            if (trigger && ingress === "ALLOW_ALL") {
                 reportViolation(
                     "CloudFunctions function should not allow public ingress from 'all'. Use a load balancer instead."
                 );
