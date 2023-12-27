@@ -2,7 +2,7 @@ import * as gcp from "@pulumi/gcp";
 
 export const cloudfunctionsFunction = new gcp.cloudfunctions.Function("fail#1", {
     name: "my-function",
-    runtime: "nodejs16",
+    runtime: "nodejs20",
     region: "europe-west1",
     triggerHttp: true,
     httpsTriggerSecurityLevel: "SECURE_OPTIONAL",

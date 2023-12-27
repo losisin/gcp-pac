@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - added `.editorconfig` file (#8).
 - CloudFunctions 1st and 2nd generation policies (#8):
+  - `disallowEndOfLifeRuntime`
   - `disallowEnvsSecrets`
   - `disallowPlainHttp`
   - `disallowPublicIngress`
