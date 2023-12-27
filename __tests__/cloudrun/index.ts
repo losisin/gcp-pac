@@ -1,6 +1,6 @@
 import * as gcp from "@pulumi/gcp";
 
-export const cloudrunPService = new gcp.cloudrun.Service("fail#1", {
+export const cloudrunService = new gcp.cloudrun.Service("fail#1", {
     location: "europe-west1",
     metadata: {
         annotations: {

@@ -2,7 +2,7 @@ import { ResourceValidationArgs, ReportViolation, EnforcementLevel } from "@pulu
 
 export const disallowEnvsSecrets = {
 	name: "cloudrun-service-disallow-envs-secrets",
-	description: "Check that CloudRun services do not use environment variables from secrets.",
+	description: "Check that CloudRun service does not use environment variables from secrets.",
 	enforcementLevel: "advisory" as EnforcementLevel,
 	validateResource: (args: ResourceValidationArgs, reportViolation: ReportViolation) => {
 		if (args.type === "gcp:cloudrun/service:Service") {
@@ -13,7 +13,7 @@ export const disallowEnvsSecrets = {
                         container.envs.forEach((env: any) => {
                             if (env?.valueFrom?.secretKeyRef) {
                                 reportViolation(
-                                    "CloudRun services should use secrets as mounted volumes."
+                                    "CloudRun service should use secrets as mounted volumes."
                                 );
                             }
                         });
