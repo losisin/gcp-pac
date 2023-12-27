@@ -2,6 +2,7 @@
 import { disallowEnvsSecrets } from "./disallowEnvsSecrets";
 import { disallowPlainHttp } from "./disallowPlainHttp";
 import { disallowPublicIngress } from "./disallowPublicIngress";
+import { disallowVpcConnectorPublicEgress } from "./disallowVpcConnectorPublicEgress"
 import { requireCmek } from "./requireCmek";
 
 export const cloudfunctionsPolicies = [
@@ -9,5 +10,6 @@ export const cloudfunctionsPolicies = [
 	disallowEnvsSecrets,
 	disallowPlainHttp,
 	disallowPublicIngress,
+	disallowVpcConnectorPublicEgress,
     requireCmek,
 ];
