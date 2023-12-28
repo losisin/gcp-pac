@@ -1,7 +1,11 @@
-import { requireCmekDataset } from "./requireCmekDataset";
-import { requireCmekTable } from "./requireCmekTable";
+import { datasetDeletionProtection} from "./datasetDeletionProtection";
+import { datasetRequireCmek } from "./datasetRequireCmek";
+import { tableDeletionProtection } from "./tableDeletionProtection";
+import { tableRequireCmek } from "./tableRequireCmek";
 
 export const bigqueryPolicies = [
-	requireCmekDataset,
-	requireCmekTable,
+	datasetDeletionProtection,
+	datasetRequireCmek,
+	tableDeletionProtection,
+	tableRequireCmek,
 ];

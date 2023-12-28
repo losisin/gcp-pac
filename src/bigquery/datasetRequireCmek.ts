@@ -1,6 +1,6 @@
 import { ResourceValidationArgs, ReportViolation, EnforcementLevel } from "@pulumi/policy";
 
-export const requireCmekDataset = {
+export const datasetRequireCmek = {
 	name: "bigquery-dataset-require-cmek",
 	description: "Check that BigQuery Dataset is encrypted using CMEK.",
 	enforcementLevel: "advisory" as EnforcementLevel,
