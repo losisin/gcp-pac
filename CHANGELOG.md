@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Cloud Storage policies (#9):
   - `disallowPublicBuckets`
+  - `disallowSelfBucketLogging`
   - `requireUniformBucketLevelAccess`
   - `requireBucketVersioning`
 
