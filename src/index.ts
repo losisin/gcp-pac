@@ -12,7 +12,7 @@ const allPolicies = [
     ...cloudrunPolicies,
     ...cloudrunv2Policies,
     ...computePolicies,
-	...storagePolicies
+    ...storagePolicies
 ]
 
 export const policies = new PolicyPack('gcp-pac', {

@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Cloud Storage policies (#9):
+  - `disallowPublicBuckets`
+
 ## [1.2.0] - 2023-12-27
 
 ### Added
