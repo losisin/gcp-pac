@@ -16,6 +16,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `requireBucketVersioning`
   - `requireCmek`
   - `requireUniformBucketLevelAccess`
+- BigQuery policies (#10):
+  - `requireCmekDataset`
+  - `requireCmekTable`
 
 ## [1.2.0] - 2023-12-27
 
