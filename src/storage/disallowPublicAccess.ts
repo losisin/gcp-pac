@@ -7,7 +7,7 @@ export const disallowPublicAccess = {
 	validateResource: (args: ResourceValidationArgs, reportViolation: ReportViolation) => {
 		if (args.type === "gcp:storage/bucket:Bucket") {
 			const publicAccessPrevention = args.props.publicAccessPrevention;
-			if (!publicAccessPrevention || publicAccessPrevention !== "enforced") {
+			if (publicAccessPrevention !== "enforced") {
 				reportViolation(
 					"Storage Bucket should have public access prevention set to 'enforced'."
 				);
