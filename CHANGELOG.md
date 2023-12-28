@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0] - 2023-12-28
+
 ### Added
 
 - Cloud Storage policies (#9):
@@ -16,6 +18,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `requireBucketVersioning`
   - `requireCmek`
   - `requireUniformBucketLevelAccess`
+- BigQuery policies (#10):
+  - `datasetDeletionProtection`
+  - `datasetDisallowPublicAccess`
+  - `datasetRequireCmek`
+  - `tableDeletionProtection`
+  - `tableDisallowPublicAccess`
+  - `tableRequireCmek`
 
 ## [1.2.0] - 2023-12-27
 
