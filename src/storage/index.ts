@@ -1,9 +1,13 @@
 import { disallowPublicAccess } from "./disallowPublicAccess";
-import { requireUniformBucketLevelAccess } from "./requireUniformBucketLevelAccess";
+import { disallowSelfBucketLogging } from "./disallowSelfBucketLogging";
+import { requireBucketLogging} from "./requireBucketLogging";
 import { requireBucketVersioning } from "./requireBucketVersioning";
+import { requireUniformBucketLevelAccess } from "./requireUniformBucketLevelAccess";
 
 export const storagePolicies = [
 	disallowPublicAccess,
+	disallowSelfBucketLogging,
+	requireBucketLogging,
 	requireBucketVersioning,
 	requireUniformBucketLevelAccess,
 ];
