@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Cloud SQL policies (#12):
+  - `disallowDefaultVpc`
+  - `disallowEndOfLifeVersion`
+  - `disallowImplicitPublicWhitelist`
+  - `disallowPublicIp`
+  - `requireAutomatedBackup`
+  - `requireCmek`
+  - `requireDeletionProtection`
+  - `requireHighAvailability`
+  - `requirePointInTimeRecovery`
+  - `requireSslConnections`
+
 ### Changed
 
 - Rename BigQuery policies that require CMEK (#12):
