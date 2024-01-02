@@ -20,10 +20,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `requireHighAvailability`
   - `requirePointInTimeRecovery`
   - `requireSslConnections`
+- MySQL policies (#14):
+  - `requireBinaryLogEnabledMysql`
+  - `requireDatabaseFlagsMysql`
+  - `requireRootPasswordMysql`
 
 ### Changed
 
-- Rename BigQuery policies that require CMEK (#12):
+- Rename BigQuery policies that require CMEK (#11):
   - `datasetRequireCmek` -> `datasetRequireCmekKms`
   - `tableRequireCmek` -> `tableRequireCmekKms`
 - Update package dependencies (#13).
