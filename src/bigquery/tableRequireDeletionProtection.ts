@@ -1,7 +1,7 @@
 import { ResourceValidationArgs, ReportViolation, EnforcementLevel } from "@pulumi/policy";
 
-export const tableDeletionProtection = {
-	name: "bigquery-table-deletion-protection",
+export const tableRequireDeletionProtection = {
+	name: "bigquery-table-require-deletion-protection",
 	description: "Check that BigQuery Table enables 'deletionProtection'.",
 	enforcementLevel: "advisory" as EnforcementLevel,
 	validateResource: (args: ResourceValidationArgs, reportViolation: ReportViolation) => {

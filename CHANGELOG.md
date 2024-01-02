@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Rename BigQuery policies that require CMEK (#12):
+  - `datasetRequireCmek` -> `datasetRequireCmekKms`
+  - `tableRequireCmek` -> `tableRequireCmekKms`
+
 ## [1.3.0] - 2023-12-28
 
 ### Added
