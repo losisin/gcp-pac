@@ -23,11 +23,11 @@ export const disallowEndOfLifeVersion = {
 							reportViolation(message);
 						}
 						break;
-					case "SQLSERVER": // https://endoflife.date/mssqlserver
-						if (version < 2019) {
-							reportViolation(message);
-						}
-						break;
+					// case "SQLSERVER": // https://endoflife.date/mssqlserver
+					// 	if (version < 2019) {
+					// 		reportViolation(message);
+					// 	}
+					// 	break;
 				}
 			}
 		}
