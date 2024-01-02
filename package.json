@@ -32,7 +32,6 @@
     "format:write": "prettier --write **/*.ts",
     "format:check": "prettier --check **/*.ts",
     "lint": "npx eslint",
-    "test": "mocha -r ts-node/register '__tests__/**/*.test.ts'",
     "package": "ncc build src/index.ts -e @pulumi/pulumi -e google-protobuf -e protobufjs -e @grpc/grpc-js --minify --out dist/",
     "package:watch": "npm run package -- --watch",
     "bundle": "npm run package && node scripts/setup.mjs",

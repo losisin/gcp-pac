@@ -8,7 +8,7 @@ export const disallowPublicIp = {
 		if (args.type === "gcp:sql/databaseInstance:DatabaseInstance") {
 			const settings = args.props.settings;
 			if (settings) {
-				const publicIp = settings.ipConfiguration?.ipv4Enabled;
+				const publicIp = settings.ipConfiguration.ipv4Enabled;
 				if (publicIp) {
 					reportViolation("CloudSQL Database Instance should be assigned private IPs only.");
 				}

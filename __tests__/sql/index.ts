@@ -1,5 +1,6 @@
 import * as gcp from "@pulumi/gcp";
 
+// Fail common settings
 export const sqlDatabaseInstance = new gcp.sql.DatabaseInstance("fail#1", {
 	databaseVersion: "POSTGRES_15",
 	region: "europe-west1",
@@ -23,8 +24,10 @@ export const sqlDatabaseInstance = new gcp.sql.DatabaseInstance("fail#1", {
 	},
 });
 
+// Fail end-of-life database version
 export const mysqlDatabaseInstance = new gcp.sql.DatabaseInstance("fail#2", {
 	databaseVersion: "MYSQL_5_7",
+	rootPassword: "my-password",
 	clone: {
 		sourceInstanceName: "my-instance",
 	},
@@ -45,4 +48,35 @@ export const sqlserverDatabaseInstance = new gcp.sql.DatabaseInstance("fail#4", 
 		sourceInstanceName: "my-instance",
 	},
 	encryptionKeyName: "my-key",
+});
+
+// Fail database flags including their default values
+export const mysqlDatabaseFlags = new gcp.sql.DatabaseInstance("fail#5", {
+	databaseVersion: "MYSQL_8_0",
+	rootPassword: "my-password",
+	encryptionKeyName: "my-key",
+	settings: {
+		tier: "db-f1-micro",
+		availabilityType: "REGIONAL",
+		deletionProtectionEnabled: true,
+		ipConfiguration: {
+			ipv4Enabled: false,
+			privateNetwork: "projects/my-project/global/networks/my-network",
+			requireSsl: true,
+		},
+		backupConfiguration: {
+			enabled: true,
+			binaryLogEnabled: true,
+		},
+		databaseFlags: [
+			{
+				name: "local_infile",
+				value: "on",
+			},
+			{
+				name: "skip_show_database",
+				value: "off",
+			},
+		],
+	},
 });
