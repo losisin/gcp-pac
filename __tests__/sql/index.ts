@@ -21,6 +21,28 @@ export const sqlDatabaseInstance = new gcp.sql.DatabaseInstance("fail#1", {
 			binaryLogEnabled: false,
 			pointInTimeRecoveryEnabled: false,
 		},
+		databaseFlags: [
+			{
+				name: "log_connections",
+				value: "on",
+			},
+			{
+				name: "log_disconnections",
+				value: "on",
+			},
+			{
+				name: "log_statement",
+				value: "ddl",
+			},
+			{
+				name: "cloudsql.enable_pgaudit",
+				value: "on",
+			},
+			{
+				name: "asd",
+				value: "asd",
+			}
+		],
 	},
 });
 

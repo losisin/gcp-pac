@@ -26,6 +26,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `requireRootPasswordMysql`
 - SQL Server policies (#15):
   - `requireDatabaseFlagsSqlServer`
+- PostgreSQL policies (#16):
+  - `requireDatabaseFlagsPostgresql`
 
 ### Changed
 
