@@ -1,15 +1,15 @@
-import { datasetDeletionProtection} from "./datasetDeletionProtection";
 import { datasetDisallowPublicAccess } from "./datasetDisallowPublicAccess";
 import { datasetRequireCmek } from "./datasetRequireCmek";
-import { tableDeletionProtection } from "./tableDeletionProtection";
+import { datasetRequireDeletionProtection} from "./datasetRequireDeletionProtection";
+import { tableRequireDeletionProtection } from "./tableRequireDeletionProtection";
 import { tableDisallowPublicAccess } from "./tableDisallowPublicAccess";
 import { tableRequireCmek } from "./tableRequireCmek";
 
 export const bigqueryPolicies = [
-	datasetDeletionProtection,
 	datasetDisallowPublicAccess,
 	datasetRequireCmek,
-	tableDeletionProtection,
+	datasetRequireDeletionProtection,
 	tableDisallowPublicAccess,
 	tableRequireCmek,
+	tableRequireDeletionProtection,
 ];

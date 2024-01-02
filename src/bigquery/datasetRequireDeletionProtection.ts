@@ -1,7 +1,7 @@
 import { ResourceValidationArgs, ReportViolation, EnforcementLevel } from "@pulumi/policy";
 
-export const datasetDeletionProtection = {
-	name: "bigquery-dataset-deletion-protection",
+export const datasetRequireDeletionProtection = {
+	name: "bigquery-dataset-require-deletion-protection",
 	description: "Check that BigQuery Dataset enables 'deleteContentsOnDestroy'.",
 	enforcementLevel: "advisory" as EnforcementLevel,
 	validateResource: (args: ResourceValidationArgs, reportViolation: ReportViolation) => {
