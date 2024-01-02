@@ -6,6 +6,7 @@ import { requireAutomatedBackup } from "./requireAutomatedBackup";
 import { requireBinaryLogEnabledMysql } from "./requireBinaryLogEnabledMysql";
 import { requireCmek } from "./requireCmek";
 import { requireDatabaseFlagsMysql } from "./requireDatabaseFlagsMysql";
+import { requireDatabaseFlagsSqlServer } from "./requireDatabaseFlagsSqlServer";
 import { requireDeletionProtection } from "./requireDeletionProtection";
 import { requireHighAvailability } from "./requireHighAvailability";
 import { requirePointInTimeRecovery } from "./requirePointInTimeRecovery";
@@ -19,6 +20,7 @@ export const sqlPolicies = [
 	disallowPublicIp,
 	requireAutomatedBackup,
 	requireBinaryLogEnabledMysql,
+	requireDatabaseFlagsSqlServer,
 	requireCmek,
 	requireDatabaseFlagsMysql,
 	requireDeletionProtection,

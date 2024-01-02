@@ -80,3 +80,53 @@ export const mysqlDatabaseFlags = new gcp.sql.DatabaseInstance("fail#5", {
 		],
 	},
 });
+
+export const sqlserverDatabaseFlags = new gcp.sql.DatabaseInstance("fail#6", {
+	databaseVersion: "SQLSERVER_2019_STANDARD",
+	rootPassword: "my-password",
+	encryptionKeyName: "my-key",
+	settings: {
+		tier: "db-f1-micro",
+		availabilityType: "REGIONAL",
+		deletionProtectionEnabled: true,
+		ipConfiguration: {
+			ipv4Enabled: false,
+			privateNetwork: "projects/my-project/global/networks/my-network",
+			requireSsl: true,
+		},
+		backupConfiguration: {
+			enabled: true,
+			binaryLogEnabled: true,
+		},
+		databaseFlags: [
+			{
+				name: "external scripts enabled",
+				value: "on",
+			},
+			{
+				name: "cross db ownership chaining",
+				value: "on",
+			},
+			{
+				name: "user Connections",
+				value: "10000",
+			},
+			{
+				name: "user options",
+				value: "-1",
+			},
+			{
+				name: "remote access",
+				value: "on",
+			},
+			{
+				name: "3625 (trace flag)",
+				value: "off",
+			},
+			{
+				name: "contained database authentication",
+				value: "on",
+			},
+		],
+	},
+});
