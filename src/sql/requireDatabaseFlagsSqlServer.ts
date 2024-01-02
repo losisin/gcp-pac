@@ -6,6 +6,7 @@ interface ExpectedFlag {
     required: boolean; // 'true' indicates that default value violates the policy
 }
 
+// https://cloud.google.com/sql/docs/sqlserver/flags
 const expectedFlags: ExpectedFlag[] = [
     {
         name: "external scripts enabled",
@@ -45,7 +46,7 @@ const expectedFlags: ExpectedFlag[] = [
 ];
 
 export const requireDatabaseFlagsSqlServer = {
-    name: "sql-disallow-database-flags-sqlserver",
+    name: "sql-require-database-flags-sqlserver",
     description: "Check that SQL Server Database Instance has database flags set.",
     enforcementLevel: "advisory" as EnforcementLevel,
     validateResource: (args: ResourceValidationArgs, reportViolation: ReportViolation) => {

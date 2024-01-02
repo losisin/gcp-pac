@@ -21,6 +21,28 @@ export const sqlDatabaseInstance = new gcp.sql.DatabaseInstance("fail#1", {
 			binaryLogEnabled: false,
 			pointInTimeRecoveryEnabled: false,
 		},
+		databaseFlags: [
+			{
+				name: "log_connections",
+				value: "on",
+			},
+			{
+				name: "log_disconnections",
+				value: "on",
+			},
+			{
+				name: "log_statement",
+				value: "ddl",
+			},
+			{
+				name: "cloudsql.enable_pgaudit",
+				value: "on",
+			},
+			{
+				name: "asd",
+				value: "asd",
+			}
+		],
 	},
 });
 
@@ -127,6 +149,60 @@ export const sqlserverDatabaseFlags = new gcp.sql.DatabaseInstance("fail#6", {
 				name: "contained database authentication",
 				value: "on",
 			},
+		],
+	},
+});
+
+export const postgresDatabaseFlags = new gcp.sql.DatabaseInstance("fail#7", {
+	databaseVersion: "POSTGRES_15",
+	rootPassword: "my-password",
+	encryptionKeyName: "my-key",
+	settings: {
+		tier: "db-f1-micro",
+		availabilityType: "REGIONAL",
+		deletionProtectionEnabled: true,
+		ipConfiguration: {
+			ipv4Enabled: false,
+			privateNetwork: "projects/my-project/global/networks/my-network",
+			requireSsl: true,
+		},
+		backupConfiguration: {
+			enabled: true,
+			binaryLogEnabled: true,
+		},
+		databaseFlags: [
+			{
+				name: "log_error_verbosity",
+				value: "terse",
+			},
+			{
+				name: "log_connections",
+				value: "off",
+			},
+			{
+				name: "log_disconnections",
+				value: "off",
+			},
+			{
+				name: "log_statement",
+				value: "none",
+			},
+			{
+				name: "log_min_error_statement",
+				value: "panic",
+			},
+			{
+				name: "log_min_duration_statement",
+				value: "10000",
+			},
+			{
+				name: "cloudsql.enable_pgaudit",
+				value: "off",
+			},
+			{
+				name: "asd",
+				value: "asd",
+			}
 		],
 	},
 });
