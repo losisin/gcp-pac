@@ -1,5 +1,3 @@
-import { backendserviceRequireSecuritypolicy } from "./backendserviceRequireSecuritypolicy";
+import { backendserviceRequireSecuritypolicy } from './backendserviceRequireSecuritypolicy'
 
-export const computePolicies = [
-	backendserviceRequireSecuritypolicy,
-];
+export const computePolicies = [backendserviceRequireSecuritypolicy]

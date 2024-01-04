@@ -1,16 +1,14 @@
-import { ResourceValidationArgs, ReportViolation, EnforcementLevel } from "@pulumi/policy";
+import { ResourceValidationArgs, ReportViolation, EnforcementLevel } from '@pulumi/policy'
 
 export const requireBucketVersioning = {
-	name: "storage-require-bucket-versioning",
-	description: "Check that Storage Bucket has versioning enabled.",
-	enforcementLevel: "advisory" as EnforcementLevel,
+	name: 'storage-require-bucket-versioning',
+	description: 'Check that Storage Bucket has versioning enabled.',
+	enforcementLevel: 'advisory' as EnforcementLevel,
 	validateResource: (args: ResourceValidationArgs, reportViolation: ReportViolation) => {
-		if (args.type === "gcp:storage/bucket:Bucket") {
-			const versioning = args.props.versioning;
+		if (args.type === 'gcp:storage/bucket:Bucket') {
+			const versioning = args.props.versioning
 			if (!versioning || !versioning.enabled) {
-				reportViolation(
-					"Storage Bucket should have versioning enabled."
-				);
+				reportViolation('Storage Bucket should have versioning enabled.')
 			}
 		}
 	}

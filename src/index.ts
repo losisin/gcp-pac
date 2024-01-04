@@ -9,16 +9,16 @@ import { sqlPolicies } from './sql'
 import { storagePolicies } from './storage'
 
 const allPolicies = [
-    ...bigqueryPolicies,
-    ...cloudfunctionsPolicies,
-    ...cloudfunctionsv2Policies,
-    ...cloudrunPolicies,
-    ...cloudrunv2Policies,
-    ...computePolicies,
-    ...sqlPolicies,
-    ...storagePolicies
+	...bigqueryPolicies,
+	...cloudfunctionsPolicies,
+	...cloudfunctionsv2Policies,
+	...cloudrunPolicies,
+	...cloudrunv2Policies,
+	...computePolicies,
+	...sqlPolicies,
+	...storagePolicies
 ]
 
 export const policies = new PolicyPack('gcp-pac', {
-    policies: allPolicies
+	policies: allPolicies
 })
