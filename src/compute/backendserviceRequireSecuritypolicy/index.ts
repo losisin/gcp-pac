@@ -10,7 +10,7 @@ export const backendserviceRequireSecuritypolicy = {
 			const securityPolicy = args.props.securityPolicy
 			if (loadBalancingScheme !== 'INTERNAL_SELF_MANAGED' && !securityPolicy) {
 				reportViolation(
-					'Backendervice should have a security policy set unless unless scheme is INTERNAL_SELF_MANAGED.'
+					'Backend Service should have a security policy set unless unless scheme is INTERNAL_SELF_MANAGED.'
 				)
 			}
 		}

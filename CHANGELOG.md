@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Fix typo in `backendserviceRequireSecuritypolicy` policy (#18).
+
 ## [1.4.1] - 2024-01-04
 
 ### Changed
