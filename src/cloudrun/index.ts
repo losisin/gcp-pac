@@ -1,7 +1,4 @@
-import { disallowPublicIngress } from "./disallowPublicIngress";
-import { disallowEnvsSecrets } from "./disallowEnvsSecrets";
+import { disallowPublicIngress } from './disallowPublicIngress'
+import { disallowEnvsSecrets } from './disallowEnvsSecrets'
 
-export const cloudrunPolicies = [
-	disallowEnvsSecrets,
-	disallowPublicIngress,
-];
+export const cloudrunPolicies = [disallowEnvsSecrets, disallowPublicIngress]

@@ -1,9 +1,9 @@
-import { disallowPublicAccess } from "./disallowPublicAccess";
-import { disallowSelfBucketLogging } from "./disallowSelfBucketLogging";
-import { requireBucketLogging} from "./requireBucketLogging";
-import { requireBucketVersioning } from "./requireBucketVersioning";
-import { requireCmek } from "./requireCmek";
-import { requireUniformBucketLevelAccess } from "./requireUniformBucketLevelAccess";
+import { disallowPublicAccess } from './disallowPublicAccess'
+import { disallowSelfBucketLogging } from './disallowSelfBucketLogging'
+import { requireBucketLogging } from './requireBucketLogging'
+import { requireBucketVersioning } from './requireBucketVersioning'
+import { requireCmek } from './requireCmek'
+import { requireUniformBucketLevelAccess } from './requireUniformBucketLevelAccess'
 
 export const storagePolicies = [
 	disallowPublicAccess,
@@ -11,5 +11,5 @@ export const storagePolicies = [
 	requireBucketLogging,
 	requireBucketVersioning,
 	requireCmek,
-	requireUniformBucketLevelAccess,
-];
+	requireUniformBucketLevelAccess
+]

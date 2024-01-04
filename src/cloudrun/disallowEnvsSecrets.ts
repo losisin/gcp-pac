@@ -1,25 +1,25 @@
-import { ResourceValidationArgs, ReportViolation, EnforcementLevel } from "@pulumi/policy";
+import { ResourceValidationArgs, ReportViolation, EnforcementLevel } from '@pulumi/policy'
 
 export const disallowEnvsSecrets = {
-	name: "cloudrun-service-disallow-envs-secrets",
-	description: "Check that CloudRun service does not use environment variables from secrets.",
-	enforcementLevel: "advisory" as EnforcementLevel,
+	name: 'cloudrun-service-disallow-envs-secrets',
+	description: 'Check that CloudRun service does not use environment variables from secrets.',
+	enforcementLevel: 'advisory' as EnforcementLevel,
 	validateResource: (args: ResourceValidationArgs, reportViolation: ReportViolation) => {
-		if (args.type === "gcp:cloudrun/service:Service") {
-            const containers = args.props.template.spec.containers;
-            if (containers) {
-                containers.forEach((container: any) => {
-                    if (container.envs) {
-                        container.envs.forEach((env: any) => {
-                            if (env?.valueFrom?.secretKeyRef) {
-                                reportViolation(
-                                    "CloudRun service should use secrets as mounted volumes."
-                                );
-                            }
-                        });
-                    }
-              });
-            }
+		if (args.type === 'gcp:cloudrun/service:Service') {
+			const containers = args.props.template.spec.containers
+			if (containers) {
+				containers.forEach((container: any) => {
+					if (container.envs) {
+						container.envs.forEach((env: any) => {
+							if (env?.valueFrom?.secretKeyRef) {
+								reportViolation(
+									'CloudRun service should use secrets as mounted volumes.'
+								)
+							}
+						})
+					}
+				})
+			}
 		}
-	},
+	}
 }
