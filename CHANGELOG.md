@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Update packages and node engine version (#20).
+
 ### Fixed
 
 - Fix typo in `backendserviceRequireSecuritypolicy` policy (#18).
