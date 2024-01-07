@@ -16,6 +16,9 @@ export const containerCluster = new gcp.container.Cluster('fail#1', {
 			}
 		]
 	},
+	databaseEncryption: {
+		state: 'DECRYPTED'
+	},
 	confidentialNodes: {
 		enabled: false
 	},
@@ -25,6 +28,10 @@ export const containerCluster = new gcp.container.Cluster('fail#1', {
 				machineType: 'n1-standard-1',
 				confidentialNodes: {
 					enabled: false
+				},
+				shieldedInstanceConfig: {
+					enableIntegrityMonitoring: false,
+					enableSecureBoot: false
 				}
 			},
 			management: {
@@ -35,18 +42,51 @@ export const containerCluster = new gcp.container.Cluster('fail#1', {
 	]
 })
 
+export const containerClusterAutoscale = new gcp.container.Cluster('fail#2', {
+	name: 'fail-1',
+	location: 'europe-west1',
+	removeDefaultNodePool: true,
+	initialNodeCount: 1,
+	enableShieldedNodes: true,
+	masterAuthorizedNetworksConfig: {},
+	confidentialNodes: {
+		enabled: true
+	},
+	databaseEncryption: {
+		state: 'ENCRYPTED',
+		keyName: 'projects/my-project/locations/europe-west1/keyRings/my-keyring/cryptoKeys/my-key'
+	},
+	clusterAutoscaling: {
+		enabled: true,
+		autoProvisioningDefaults: {
+			management: {
+				autoRepair: false,
+				autoUpgrade: false
+			},
+			shieldedInstanceConfig: {
+				enableIntegrityMonitoring: false,
+				enableSecureBoot: false
+			}
+		}
+	}
+})
+
 export const containerNodePool = new gcp.container.NodePool('fail#1', {
 	location: 'europe-west1',
 	nodeCount: 1,
 	cluster: containerCluster.id,
 	management: {
 		autoRepair: false,
-		autoUpgrade: false
+		autoUpgrade: true
 	},
 	nodeConfig: {
 		machineType: 'n1-standard-1',
 		confidentialNodes: {
 			enabled: false
+		},
+		shieldedInstanceConfig: {
+			enableIntegrityMonitoring: false,
+			enableSecureBoot: false
 		}
 	}
 })
