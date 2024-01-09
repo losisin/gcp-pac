@@ -12,16 +12,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Container Registry policy (#19)
   - `disallowContainerRegistry`
 - Container Cluster and NodePool policies (#19)
-  - `disallowContainerRegistry`
+  - `disallowIssueClientCertificate`
+  - `disallowLegacyAbac`
   - `requireAutoRepairNodes`
   - `requireAutoUpgradeNodes`
+  - `requireBinaryAuthorization`
   - `requireConfidentialNodes`
+  - `requireContainerOptimizedOs`
   - `requireDatabaseEncryption`
   - `requireEnableIntegrityMonitoring`
+  - `requireEnableNetworkPolicy`
+  - `requireEnablePrivateEndpoint`
   - `requireEnableSecureBoot`
   - `requireEnableShieldedNodes`
+  - `requireLoggingService`
   - `requireMasterAuthorizedNetworks`
+  - `requireMonitoringService`
+  - `requirePrivateClusterConfig`
   - `requireRemoveDefaultNodePool`
+  - `requireWorkloadIdentityConfig`
 
 ### Changed
 
