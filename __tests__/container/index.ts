@@ -28,6 +28,7 @@ export const containerCluster = new gcp.container.Cluster('fail#1', {
 	nodePools: [
 		{
 			nodeConfig: {
+				imageType: 'UBUNTU_CONTAINERD',
 				machineType: 'n1-standard-1',
 				confidentialNodes: {
 					enabled: false
@@ -44,7 +45,16 @@ export const containerCluster = new gcp.container.Cluster('fail#1', {
 		}
 	],
 	loggingService: 'none',
-	monitoringService: 'none'
+	monitoringService: 'none',
+	enableLegacyAbac: true,
+	masterAuth: {
+		clientCertificateConfig: {
+			issueClientCertificate: true
+		}
+	},
+	networkPolicy: {
+		enabled: false
+	}
 })
 
 export const containerClusterAutoscale = new gcp.container.Cluster('fail#2', {
@@ -68,6 +78,7 @@ export const containerClusterAutoscale = new gcp.container.Cluster('fail#2', {
 	clusterAutoscaling: {
 		enabled: true,
 		autoProvisioningDefaults: {
+			imageType: 'UBUNTU_CONTAINERD',
 			management: {
 				autoRepair: false,
 				autoUpgrade: false
@@ -83,7 +94,8 @@ export const containerClusterAutoscale = new gcp.container.Cluster('fail#2', {
 	},
 	workloadIdentityConfig: {
 		workloadPool: 'my-project.svc.id.goog'
-	}
+	},
+	datapathProvider: 'ADVANCED_DATAPATH',
 })
 
 export const containerNodePool = new gcp.container.NodePool('fail#1', {
@@ -95,6 +107,7 @@ export const containerNodePool = new gcp.container.NodePool('fail#1', {
 		autoUpgrade: true
 	},
 	nodeConfig: {
+		imageType: 'UBUNTU_CONTAINERD',
 		machineType: 'n1-standard-1',
 		confidentialNodes: {
 			enabled: false
