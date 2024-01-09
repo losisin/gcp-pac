@@ -7,6 +7,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.5.0] - 2024-01-09
+
+### Added
+
+- Container Registry policy (#19)
+  - `disallowContainerRegistry`
+- Container Cluster and NodePool policies (#19)
+  - `disallowIssueClientCertificate`
+  - `disallowLegacyAbac`
+  - `requireAutoRepairNodes`
+  - `requireAutoUpgradeNodes`
+  - `requireBinaryAuthorization`
+  - `requireConfidentialNodes`
+  - `requireContainerOptimizedOs`
+  - `requireDatabaseEncryption`
+  - `requireEnableIntegrityMonitoring`
+  - `requireEnableNetworkPolicy`
+  - `requireEnablePrivateEndpoint`
+  - `requireEnableSecureBoot`
+  - `requireEnableShieldedNodes`
+  - `requireLoggingService`
+  - `requireMasterAuthorizedNetworks`
+  - `requireMonitoringService`
+  - `requirePrivateClusterConfig`
+  - `requireRemoveDefaultNodePool`
+  - `requireWorkloadIdentityConfig`
+
 ### Changed
 
 - Update packages and node engine version (#20).
