@@ -9,6 +9,9 @@ export const containerCluster = new gcp.container.Cluster('fail#1', {
 	},
 	initialNodeCount: 1,
 	enableShieldedNodes: false,
+	privateClusterConfig: {
+		enablePrivateNodes: false
+	},
 	masterAuthorizedNetworksConfig: {
 		cidrBlocks: [
 			{
@@ -39,7 +42,9 @@ export const containerCluster = new gcp.container.Cluster('fail#1', {
 				autoUpgrade: false
 			}
 		}
-	]
+	],
+	loggingService: 'none',
+	monitoringService: 'none'
 })
 
 export const containerClusterAutoscale = new gcp.container.Cluster('fail#2', {
@@ -48,6 +53,10 @@ export const containerClusterAutoscale = new gcp.container.Cluster('fail#2', {
 	removeDefaultNodePool: true,
 	initialNodeCount: 1,
 	enableShieldedNodes: true,
+	privateClusterConfig: {
+		enablePrivateEndpoint: true,
+		enablePrivateNodes: true
+	},
 	masterAuthorizedNetworksConfig: {},
 	confidentialNodes: {
 		enabled: true
@@ -68,6 +77,12 @@ export const containerClusterAutoscale = new gcp.container.Cluster('fail#2', {
 				enableSecureBoot: false
 			}
 		}
+	},
+	binaryAuthorization: {
+		evaluationMode: 'PROJECT_SINGLETON_POLICY_ENFORCE'
+	},
+	workloadIdentityConfig: {
+		workloadPool: 'my-project.svc.id.goog'
 	}
 })
 
