@@ -95,7 +95,7 @@ export const containerClusterAutoscale = new gcp.container.Cluster('fail#2', {
 	workloadIdentityConfig: {
 		workloadPool: 'my-project.svc.id.goog'
 	},
-	datapathProvider: 'ADVANCED_DATAPATH',
+	datapathProvider: 'ADVANCED_DATAPATH'
 })
 
 export const containerNodePool = new gcp.container.NodePool('fail#1', {
