@@ -1,7 +1,7 @@
 import { ResourceValidationArgs, ReportViolation, EnforcementLevel } from '@pulumi/policy'
 
-export const backendserviceRequireSecuritypolicy = {
-	name: 'backendservice-require-securitypolicy',
+export const requireSecurityPolicy = {
+	name: 'backend-service-require-security-policy',
 	description: 'Check that Backend Service has a security policy set.',
 	enforcementLevel: 'advisory' as EnforcementLevel,
 	validateResource: (args: ResourceValidationArgs, reportViolation: ReportViolation) => {
@@ -10,7 +10,7 @@ export const backendserviceRequireSecuritypolicy = {
 			const securityPolicy = args.props.securityPolicy
 			if (loadBalancingScheme !== 'INTERNAL_SELF_MANAGED' && !securityPolicy) {
 				reportViolation(
-					'Backend Service should have a security policy set unless unless scheme is INTERNAL_SELF_MANAGED.'
+					'Backend Service should have a security policy set unless scheme is INTERNAL_SELF_MANAGED.'
 				)
 			}
 		}
