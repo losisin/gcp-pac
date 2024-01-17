@@ -1,4 +1,11 @@
+import { disallowIpForward } from './disallowIpForward'
+import { disallowSerialPortEnable } from './disallowSerialPortEnable'
 import { requireBlockProjectSSHKeys } from './requireBlockProjectSSHKeys'
-import { requireOsLogin } from './requireOsLogin'
+import { requireDeletionProtection } from './requireDeletionProtection'
 
-export const instancePolicies = [requireOsLogin, requireBlockProjectSSHKeys]
+export const instancePolicies = [
+	disallowIpForward,
+	disallowSerialPortEnable,
+	requireBlockProjectSSHKeys,
+	requireDeletionProtection
+]

@@ -20,6 +20,14 @@ export const computeInstance = new gcp.compute.Instance('fail#1', {
 	],
 	metadata: {
 		'block-project-ssh-keys': 'false',
-		'enable-oslogin': 'false'
+		'serial-port-enable': 'TRUE'
+	},
+	canIpForward: true,
+	deletionProtection: false
+})
+
+export const projectMetadata = new gcp.compute.ProjectMetadata('fail#1', {
+	metadata: {
+		foo: 'bar'
 	}
 })
