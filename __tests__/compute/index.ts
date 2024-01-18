@@ -49,3 +49,13 @@ export const projectMetadata = new gcp.compute.ProjectMetadata('fail#1', {
 		foo: 'bar'
 	}
 })
+
+export const sslPolicy = new gcp.compute.SSLPolicy('fail#1', {
+	minTlsVersion: 'TLS_1_1',
+	profile: 'CUSTOM',
+	customFeatures: [
+		'TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384',
+		'TLS_RSA_WITH_AES_128_GCM_SHA256',
+		'TLS_RSA_WITH_AES_256_CBC_SHA'
+	]
+})
