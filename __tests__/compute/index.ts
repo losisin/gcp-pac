@@ -38,6 +38,12 @@ export const computeInstance = new gcp.compute.Instance('fail#1', {
 	}
 })
 
+export const disk = new gcp.compute.Disk('fail#1', {
+	type: 'pd-ssd',
+	zone: 'europe-west1-a',
+	physicalBlockSizeBytes: 4096
+})
+
 export const projectMetadata = new gcp.compute.ProjectMetadata('fail#1', {
 	metadata: {
 		foo: 'bar'
