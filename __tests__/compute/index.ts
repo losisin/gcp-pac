@@ -32,6 +32,9 @@ export const computeInstance = new gcp.compute.Instance('fail#1', {
 	shieldedInstanceConfig: {
 		enableIntegrityMonitoring: false,
 		enableVtpm: false
+	},
+	confidentialInstanceConfig: {
+		enableConfidentialCompute: false
 	}
 })
 
