@@ -15,7 +15,8 @@ export const computeInstance = new gcp.compute.Instance('fail#1', {
 	},
 	networkInterfaces: [
 		{
-			network: 'default'
+			network: 'default',
+			accessConfigs: [{}]
 		}
 	],
 	metadata: {
@@ -23,7 +24,15 @@ export const computeInstance = new gcp.compute.Instance('fail#1', {
 		'serial-port-enable': 'TRUE'
 	},
 	canIpForward: true,
-	deletionProtection: false
+	deletionProtection: false,
+	serviceAccount: {
+		email: '0123456789-compute@developer.gserviceaccount.com',
+		scopes: ['cloud-platform', 'https://www.googleapis.com/auth/cloud-platform']
+	},
+	shieldedInstanceConfig: {
+		enableIntegrityMonitoring: false,
+		enableVtpm: false
+	}
 })
 
 export const projectMetadata = new gcp.compute.ProjectMetadata('fail#1', {
