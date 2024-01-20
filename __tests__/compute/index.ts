@@ -1,11 +1,38 @@
 import * as gcp from '@pulumi/gcp'
 
-export const backendService = new gcp.compute.BackendService('fail#1', {
+export const backendService = new gcp.compute.BackendService('fail1', {
 	name: 'fail1',
 	loadBalancingScheme: 'EXTERNAL'
 })
 
-export const computeInstance = new gcp.compute.Instance('fail#1', {
+const firewall = new gcp.compute.Firewall('fail1', {
+	allows: [
+		{
+			ports: [
+				'20', // FTP
+				'21', // FTP
+				'22', // SSH
+				'25', // SMTP
+				'53', // DNS
+				'135', // RPC
+				'1521', // Oracle Database
+				'3306', // MySQL
+				'3389', // RDP
+				'5432', // PostgreSQL
+				'1433', // Microsoft SQL Server
+				'1000-2000'
+			],
+			protocol: 'tcp'
+		},
+		{
+			protocol: 'icmp'
+		}
+	],
+	network: 'default',
+	sourceRanges: ['0.0.0.0/0']
+})
+
+export const computeInstance = new gcp.compute.Instance('fail1', {
 	machineType: 'n2-standard-2',
 	zone: 'europe-west1-b',
 	bootDisk: {
@@ -38,13 +65,13 @@ export const computeInstance = new gcp.compute.Instance('fail#1', {
 	}
 })
 
-export const disk = new gcp.compute.Disk('fail#1', {
+export const disk = new gcp.compute.Disk('fail1', {
 	type: 'pd-ssd',
 	zone: 'europe-west1-a',
 	physicalBlockSizeBytes: 4096
 })
 
-export const projectMetadata = new gcp.compute.ProjectMetadata('fail#1', {
+export const projectMetadata = new gcp.compute.ProjectMetadata('fail1', {
 	metadata: {
 		foo: 'bar'
 	}
