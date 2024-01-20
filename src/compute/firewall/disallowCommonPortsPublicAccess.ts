@@ -16,7 +16,7 @@ const restrictedPorts: number[] = [
 
 export const disallowCommonPortsPublicAccess = {
 	name: 'compute-firewall-disallow-common-ports-public-access',
-	description: "Check that Compute Firewall doesn't allow unrestricted access to common ports.",
+	description: "Check that Firewall doesn't allow unrestricted access to common ports.",
 	enforcementLevel: 'advisory' as EnforcementLevel,
 	validateResource: (args: ResourceValidationArgs, reportViolation: ReportViolation) => {
 		if (args.type === 'gcp:compute/firewall:Firewall') {
@@ -28,7 +28,7 @@ export const disallowCommonPortsPublicAccess = {
 					ports?.forEach((port: string) => {
 						if (restrictedPorts.includes(Number(port))) {
 							reportViolation(
-								`Compute Firewall rule should not allow unrestricted access on port ${port}.`
+								`Firewall rule should not allow unrestricted access on port ${port}.`
 							)
 						}
 					})
