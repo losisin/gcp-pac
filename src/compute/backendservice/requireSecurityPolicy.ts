@@ -6,9 +6,9 @@ export const requireSecurityPolicy = {
 	enforcementLevel: 'advisory' as EnforcementLevel,
 	validateResource: (args: ResourceValidationArgs, reportViolation: ReportViolation) => {
 		if (args.type === 'gcp:compute/backendService:BackendService') {
-			const loadBalancingScheme = args.props.loadBalancingScheme
 			const securityPolicy = args.props.securityPolicy
-			if (loadBalancingScheme !== 'INTERNAL_SELF_MANAGED' && !securityPolicy) {
+			const edgeSecurityPolicy = args.props.edgeSecurityPolicy
+			if (!securityPolicy || !edgeSecurityPolicy) {
 				reportViolation(
 					'Backend Service should have a security policy set unless scheme is INTERNAL_SELF_MANAGED.'
 				)

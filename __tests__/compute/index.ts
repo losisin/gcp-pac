@@ -2,10 +2,10 @@ import * as gcp from '@pulumi/gcp'
 
 export const backendService = new gcp.compute.BackendService('fail1', {
 	name: 'fail1',
-	loadBalancingScheme: 'EXTERNAL',
 	logConfig: {
 		enable: false
-	}
+	},
+	enableCdn: false
 })
 
 const firewall = new gcp.compute.Firewall('fail1', {
@@ -80,7 +80,7 @@ export const projectMetadata = new gcp.compute.ProjectMetadata('fail1', {
 	}
 })
 
-export const sslPolicy = new gcp.compute.SSLPolicy('fail#1', {
+export const sslPolicy = new gcp.compute.SSLPolicy('fail1', {
 	minTlsVersion: 'TLS_1_1',
 	profile: 'CUSTOM',
 	customFeatures: [
