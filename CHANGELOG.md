@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Cloud DNS policies (#30)
+  - `disallowRsasha1Algorithm`
+  - `requireDnssecStateOn`
+
 ## [1.6.0] - 2024-01-21
 
 ### Added
