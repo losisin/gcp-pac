@@ -40,6 +40,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Subnetwork
     - `requireVpcFlowLogs`
 
+### Changed
+
+- Update packages (#28)
+
 ## [1.5.0] - 2024-01-09
 
 ### Added
