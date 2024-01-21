@@ -1,7 +1,7 @@
 import { ResourceValidationArgs, ReportViolation, EnforcementLevel } from '@pulumi/policy'
 
 export const requireEnableCdn = {
-	name: 'backend-service-require-enable-cdn',
+	name: 'compute-backend-service-require-enable-cdn',
 	description: 'Check that Backend Service has CDN enabled.',
 	enforcementLevel: 'advisory' as EnforcementLevel,
 	validateResource: (args: ResourceValidationArgs, reportViolation: ReportViolation) => {

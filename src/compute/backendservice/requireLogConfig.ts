@@ -1,7 +1,7 @@
 import { ResourceValidationArgs, ReportViolation, EnforcementLevel } from '@pulumi/policy'
 
 export const requireLogConfig = {
-	name: 'compute-firewall-require-logconfig',
+	name: 'compute-backend-service-require-logconfig',
 	description: 'Check that Backend Service has logging enabled.',
 	enforcementLevel: 'advisory' as EnforcementLevel,
 	validateResource: (args: ResourceValidationArgs, reportViolation: ReportViolation) => {

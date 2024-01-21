@@ -1,7 +1,7 @@
 import { ResourceValidationArgs, ReportViolation, EnforcementLevel } from '@pulumi/policy'
 
 export const requireSecurityPolicy = {
-	name: 'backend-service-require-security-policy',
+	name: 'compute-backend-service-require-security-policy',
 	description: 'Check that Backend Service has edge security policy set.',
 	enforcementLevel: 'advisory' as EnforcementLevel,
 	validateResource: (args: ResourceValidationArgs, reportViolation: ReportViolation) => {

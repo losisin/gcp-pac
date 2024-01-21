@@ -7,6 +7,39 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Compute policies (#21)
+  - BackendService
+    - `requireEnableCdn`
+    - `requireLogConfig`
+    - `requireSecurityPolicy`
+  - Disk
+    - `requireDiskEncryptionKey`
+  - Firewall
+    - `disallowCommonPortsPublicAccess`
+    - `disallowDefaultNetwork`
+    - `disallowPortRangePublicAccess`
+    - `disallowProtocolPublicAccess`
+    - `requireLogConfig`
+  - Instance
+    - `disallowDefaultServiceAccount`
+    - `disallowExternalIp`
+    - `disallowIpForward`
+    - `disallowSerialPortEnable`
+    - `requireBlockProjectSSHKeys`
+    - `requireBootDiskEncryption`
+    - `requireConfidentialInstanceConfig`
+    - `requireDeletionProtection`
+    - `requireShieldedInstanceConfig`
+  - Project Metadata
+    - `requireOsLogin`
+  - SSL Policy
+    - `disallowProfileCompatible`
+    - `disallowWeakChipherSuites`
+  - Subnetwork
+    - `requireVpcFlowLogs`
+
 ## [1.5.0] - 2024-01-09
 
 ### Added
