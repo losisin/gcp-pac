@@ -4,6 +4,7 @@ import { firewallPolicies } from './firewall'
 import { instancePolicies } from './instance'
 import { projectMetadataPolicies } from './projectMetadata'
 import { sslPolicies } from './sslPolicy'
+import { subnetworkPolicies } from './subnetwork'
 
 export const computePolicies = [
 	...backendservicePolicies,
@@ -11,5 +12,6 @@ export const computePolicies = [
 	...firewallPolicies,
 	...instancePolicies,
 	...projectMetadataPolicies,
-	...sslPolicies
+	...sslPolicies,
+	...subnetworkPolicies
 ]

@@ -89,3 +89,9 @@ export const sslPolicy = new gcp.compute.SSLPolicy('fail1', {
 		'TLS_RSA_WITH_AES_256_CBC_SHA'
 	]
 })
+export const subnetwork = new gcp.compute.Subnetwork('fail1', {
+	ipCidrRange: '10.2.0.0/16',
+	region: 'europe-west1',
+	network: 'default',
+	purpose: 'PRIVATE_RFC_1918'
+})
