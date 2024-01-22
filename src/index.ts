@@ -8,6 +8,7 @@ import { computePolicies } from './compute'
 import { containerPolicies } from './container'
 import { dnsPolicies } from './dns'
 import { pubsubPolicies } from './pubsub'
+import { redisPolicies } from './redis'
 import { sqlPolicies } from './sql'
 import { storagePolicies } from './storage'
 
@@ -21,6 +22,7 @@ const allPolicies = [
 	...containerPolicies,
 	...dnsPolicies,
 	...pubsubPolicies,
+	...redisPolicies,
 	...sqlPolicies,
 	...storagePolicies
 ]
