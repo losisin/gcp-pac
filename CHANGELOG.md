@@ -15,6 +15,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Pub/Sub policies [#31](https://github.com/losisin/gcp-pac/pull/31)
   - `requireSubscriptionDeadLetterTopic`
   - `requireTopicCmek`
+- Redis policies [#33](https://github.com/losisin/gcp-pac/pull/33)
+  - Cluster
+    - `disallowDefaultNetwork`
+    - `requireAuthorizationMode`
+    - `requireTransitEncryptionMode`
+  - Instance
+    - `disallowDefaultNetwork`
+    - `disallowEndOfLife`
+    - `requireAuthEnabled`
+    - `requireCustomerManagedKey`
+    - `requireHighAvailabilityTier`
+    - `requireTransitEncryptionMode`
 
 ### Fixed
 
