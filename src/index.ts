@@ -7,6 +7,7 @@ import { cloudrunv2Policies } from './cloudrunv2'
 import { computePolicies } from './compute'
 import { containerPolicies } from './container'
 import { dnsPolicies } from './dns'
+import { pubsubPolicies } from './pubsub'
 import { sqlPolicies } from './sql'
 import { storagePolicies } from './storage'
 
@@ -19,6 +20,7 @@ const allPolicies = [
 	...computePolicies,
 	...containerPolicies,
 	...dnsPolicies,
+	...pubsubPolicies,
 	...sqlPolicies,
 	...storagePolicies
 ]
