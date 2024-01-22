@@ -1,6 +1,7 @@
 import { PolicyPack } from '@pulumi/policy'
 import { artifactregistryPolicies } from './artifactregistry'
 import { bigqueryPolicies } from './bigquery'
+import { bigtablePolicies } from './bigtable'
 import { cloudfunctionsPolicies } from './cloudfunctions'
 import { cloudfunctionsv2Policies } from './cloudfunctionsv2'
 import { cloudrunPolicies } from './cloudrun'
@@ -19,6 +20,7 @@ import { storagePolicies } from './storage'
 const allPolicies = [
 	...artifactregistryPolicies,
 	...bigqueryPolicies,
+	...bigtablePolicies,
 	...cloudfunctionsPolicies,
 	...cloudfunctionsv2Policies,
 	...cloudrunPolicies,
