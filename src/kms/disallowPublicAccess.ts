@@ -1,13 +1,13 @@
 import { ResourceValidationArgs, ReportViolation, EnforcementLevel } from '@pulumi/policy'
 
-export const tableDisallowPublicAccess = {
-	name: 'bigquery-table-disallow-public-access',
-	description: 'Check that BigQuery Table is private.',
+export const disallowPublicAccess = {
+	name: 'kms-cryptokey-iam-disallow-public-access',
+	description: 'Check that KMS Crypto Key is private.',
 	enforcementLevel: 'advisory' as EnforcementLevel,
 	validateResource: (args: ResourceValidationArgs, reportViolation: ReportViolation) => {
 		const publicPrincipals = ['allUsers', 'allAuthenticatedUsers']
-		const message = 'BigQuery Table should not be anonymously or publicly accessible.'
-		if (args.type === 'gcp:bigquery/iamBinding:IamBinding') {
+		const message = 'KMS Crypto Key should not be anonymously or publicly accessible.'
+		if (args.type === 'gcp:kms/cryptoKeyIAMBinding:CryptoKeyIAMBinding') {
 			const members = args.props.members
 			if (members) {
 				members.forEach((member: string) => {
@@ -16,7 +16,7 @@ export const tableDisallowPublicAccess = {
 					}
 				})
 			}
-		} else if (args.type === 'gcp:bigquery/iamMember:IamMember') {
+		} else if (args.type === 'gcp:kms/cryptoKeyIAMMember:CryptoKeyIAMMember') {
 			const member = args.props.member
 			if (member && publicPrincipals.includes(member)) {
 				reportViolation(message)

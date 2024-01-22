@@ -1,6 +1,6 @@
 import * as gcp from '@pulumi/gcp'
 
-export const containerCluster = new gcp.container.Cluster('fail#1', {
+export const containerCluster = new gcp.container.Cluster('fail1', {
 	name: 'fail-1',
 	location: 'europe-west1',
 	removeDefaultNodePool: false,
@@ -57,7 +57,7 @@ export const containerCluster = new gcp.container.Cluster('fail#1', {
 	}
 })
 
-export const containerClusterAutoscale = new gcp.container.Cluster('fail#2', {
+export const containerClusterAutoscale = new gcp.container.Cluster('fail2', {
 	name: 'fail-1',
 	location: 'europe-west1',
 	removeDefaultNodePool: true,
@@ -98,7 +98,7 @@ export const containerClusterAutoscale = new gcp.container.Cluster('fail#2', {
 	datapathProvider: 'ADVANCED_DATAPATH'
 })
 
-export const containerNodePool = new gcp.container.NodePool('fail#1', {
+export const containerNodePool = new gcp.container.NodePool('fail1', {
 	location: 'europe-west1',
 	nodeCount: 1,
 	cluster: containerCluster.id,
@@ -119,7 +119,7 @@ export const containerNodePool = new gcp.container.NodePool('fail#1', {
 	}
 })
 
-const registry = new gcp.container.Registry('registry', {
+const registry = new gcp.container.Registry('fail1', {
 	location: 'EU',
 	project: 'my-project'
 })

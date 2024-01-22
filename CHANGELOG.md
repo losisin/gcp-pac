@@ -35,6 +35,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `disallowPublicAccess`
   - `requireCleanupPolicy`
   - `requireCustomerManagedKey`
+- KMS policies [#36](https://github.com/losisin/gcp-pac/pull/36)
+  - `disallowPublicAccess`
+  - `requireRotationPeriod`
 
 ### Fixed
 
