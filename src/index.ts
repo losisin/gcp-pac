@@ -11,11 +11,13 @@ import { containerPolicies } from './container'
 import { dnsPolicies } from './dns'
 import { kmsPolicies } from './kms'
 import { memcachePolicies } from './memcache'
+import { notebooksPolicies } from './notebooks'
 import { pubsubPolicies } from './pubsub'
 import { redisPolicies } from './redis'
 import { spannerPolicies } from './spanner'
 import { sqlPolicies } from './sql'
 import { storagePolicies } from './storage'
+import { vertexPolicies } from './vertex'
 
 const allPolicies = [
 	...artifactregistryPolicies,
@@ -30,11 +32,13 @@ const allPolicies = [
 	...dnsPolicies,
 	...kmsPolicies,
 	...memcachePolicies,
+	...notebooksPolicies,
 	...pubsubPolicies,
 	...redisPolicies,
 	...spannerPolicies,
 	...sqlPolicies,
-	...storagePolicies
+	...storagePolicies,
+	...vertexPolicies
 ]
 
 export const policies = new PolicyPack('gcp-pac', {

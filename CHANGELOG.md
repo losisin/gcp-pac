@@ -12,6 +12,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Bigtable policies [#39](https://github.com/losisin/gcp-pac/pull/39)
   - `requireDeletionProtection`
   - `requireInstanceCmek`
+- Vertex AI policies [#40](https://github.com/losisin/gcp-pac/pull/40)
+  - `requireDatasetCmek`
+  - `requireMetadataStoreCmek`
+- Notebooks policies [#40](https://github.com/losisin/gcp-pac/pull/40)
+  - `disallowDefaultNetwork`
+  - `requireInstanceCmek`
+  - `requireNoPublicIp`
 
 ## [1.7.0] - 2024-01-22
 
