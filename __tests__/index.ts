@@ -1,5 +1,6 @@
 import { memcache } from '@pulumi/gcp'
 
+export * as artifactregistry from './artifactregistry'
 export * as biguery from './bigquery'
 export * as cloudfunctions from './cloudfunctions'
 export * as cloudfunctionsv2 from './cloudfunctionsv2'

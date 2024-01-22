@@ -31,6 +31,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `disallowDefaultNetwork`
   - `disallowEndOfLife`
   - `requireNodeCount`
+- Artifact Registry policies [#35](https://github.com/losisin/gcp-pac/pull/35)
+  - `disallowPublicAccess`
+  - `requireCleanupPolicy`
+  - `requireCustomerManagedKey`
 
 ### Fixed
 
