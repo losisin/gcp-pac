@@ -1,4 +1,4 @@
-import { memcache } from '@pulumi/gcp'
+import { memcache, spanner } from '@pulumi/gcp'
 
 export * as artifactregistry from './artifactregistry'
 export * as biguery from './bigquery'
@@ -13,5 +13,6 @@ export * as kms from './kms'
 export * as memcache from './memcache'
 export * as pubsub from './pubsub'
 export * as redis from './redis'
+export * as spanner from './spanner'
 export * as sql from './sql'
 export * as storage from './storage'

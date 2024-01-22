@@ -12,6 +12,7 @@ import { kmsPolicies } from './kms'
 import { memcachePolicies } from './memcache'
 import { pubsubPolicies } from './pubsub'
 import { redisPolicies } from './redis'
+import { spannerPolicies } from './spanner'
 import { sqlPolicies } from './sql'
 import { storagePolicies } from './storage'
 
@@ -29,6 +30,7 @@ const allPolicies = [
 	...memcachePolicies,
 	...pubsubPolicies,
 	...redisPolicies,
+	...spannerPolicies,
 	...sqlPolicies,
 	...storagePolicies
 ]

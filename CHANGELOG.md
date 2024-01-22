@@ -38,6 +38,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - KMS policies [#36](https://github.com/losisin/gcp-pac/pull/36)
   - `disallowPublicAccess`
   - `requireRotationPeriod`
+- Spanner policies [#37](https://github.com/losisin/gcp-pac/pull/37)
+  - `requireDatabaseCmek`
+  - `requireDeletionProtection`
+  - `requireEnableDropProtection`
 
 ### Fixed
 
