@@ -27,6 +27,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - `requireCustomerManagedKey`
     - `requireHighAvailabilityTier`
     - `requireTransitEncryptionMode`
+  - Memcache policies [#34](https://github.com/losisin/gcp-pac/pull/34)
+    - `disallowDefaultNetwork`
+    - `disallowEndOfLife`
+    - `requireNodeCount`
 
 ### Fixed
 
