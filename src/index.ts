@@ -8,6 +8,7 @@ import { cloudrunPolicies } from './cloudrun'
 import { cloudrunv2Policies } from './cloudrunv2'
 import { computePolicies } from './compute'
 import { containerPolicies } from './container'
+import { dataprocPolicies } from './dataproc'
 import { dnsPolicies } from './dns'
 import { kmsPolicies } from './kms'
 import { memcachePolicies } from './memcache'
@@ -30,6 +31,7 @@ const allPolicies = [
 	...cloudrunv2Policies,
 	...computePolicies,
 	...containerPolicies,
+	...dataprocPolicies,
 	...dnsPolicies,
 	...kmsPolicies,
 	...memcachePolicies,
