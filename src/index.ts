@@ -13,6 +13,7 @@ import { kmsPolicies } from './kms'
 import { memcachePolicies } from './memcache'
 import { notebooksPolicies } from './notebooks'
 import { pubsubPolicies } from './pubsub'
+import { projectsPolicies } from './projects'
 import { redisPolicies } from './redis'
 import { spannerPolicies } from './spanner'
 import { sqlPolicies } from './sql'
@@ -34,6 +35,7 @@ const allPolicies = [
 	...memcachePolicies,
 	...notebooksPolicies,
 	...pubsubPolicies,
+	...projectsPolicies,
 	...redisPolicies,
 	...spannerPolicies,
 	...sqlPolicies,
