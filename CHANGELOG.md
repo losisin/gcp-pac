@@ -33,6 +33,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `requireEnableStackdriverMonitoring`
   - `requirePrivateInstance`
 
+### Changed
+
+- Update packages [#46](https://github.com/losisin/gcp-pac/pull/46)
+
 ## [1.7.0] - 2024-01-22
 
 ### Added
