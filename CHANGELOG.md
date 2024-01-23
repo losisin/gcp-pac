@@ -21,10 +21,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `requireNoPublicIp`
 - Projects policies [#41](https://github.com/losisin/gcp-pac/pull/41)
   - `requireApiKeyRestrictions`
-- Dataproc policies [#42](https://github.com/losisin/gcp-pac/pull/42)
+- Dataproc policies [#45](https://github.com/losisin/gcp-pac/pull/45)
   - `requireClusterEncryptionConfig`
   - `requireClusterInternalIpOnly`
   - `requireMetastoreServiceEncryptionConfig`
+- Datafusion policies [#45](https://github.com/losisin/gcp-pac/pull/45)
+  - `disallowDefaultNetwork`
+  - `requireCryptoKeyConfig`
+  - `requireEnableRbac`
+  - `requireEnableStackdriverLogging`
+  - `requireEnableStackdriverMonitoring`
+  - `requirePrivateInstance`
 
 ## [1.7.0] - 2024-01-22
 
