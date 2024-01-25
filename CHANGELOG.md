@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Fix backend service CDN policy [#54](https://github.com/losisin/gcp-pac/pull/54)
+
 ## [1.8.1] - 2024-01-25
 
 ### Fixed
