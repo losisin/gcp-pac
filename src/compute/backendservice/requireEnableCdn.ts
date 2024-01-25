@@ -7,12 +7,14 @@ export const requireEnableCdn = {
 	validateResource: (args: ResourceValidationArgs, reportViolation: ReportViolation) => {
 		if (args.type === 'gcp:compute/backendService:BackendService') {
 			const loadBalancingScheme = args.props.loadBalancingScheme
-			const enableCdn = args.props.enableCdn
-			if (
-				(!loadBalancingScheme || loadBalancingScheme.startsWith('EXTERNAL')) &&
-				!enableCdn
-			) {
-				reportViolation("Backend Service with scheme 'EXTERNAL' should have CDN enabled.")
+			if (!loadBalancingScheme || loadBalancingScheme.startsWith('EXTERNAL')) {
+				const iap = args.props.iap
+				const enableCdn = args.props.enableCdn
+				if (!iap && !enableCdn) {
+					reportViolation(
+						'Backend Service should have CDN enabled when IAP is not configured.'
+					)
+				}
 			}
 		}
 	}
