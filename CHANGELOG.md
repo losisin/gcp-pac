@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.8.1] - 2024-01-25
+
 ### Fixed
 
 - Fix backend service security policy [#51](https://github.com/losisin/gcp-pac/pull/51)
