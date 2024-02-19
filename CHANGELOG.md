@@ -11,6 +11,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Service Account policies [#82](https://github.com/losisin/gcp-pac/pull/82)
   - `disallowUserManagedKeys`
+- Projects
+  - `disallowAdminPrivileges`
+  - `disallowServiceAccountTokenCreator`
+  - `disallowServiceAccountUser`
+  - `requireApiKeySourceRestrictions`
+  - `requireApiKeyTargetRestrictions`
+- Folder
+  - `disallowAdminPrivileges`
+  - `disallowServiceAccountTokenCreator`
+  - `disallowServiceAccountUser`
+- Organizations
+  - `disallowAdminPrivileges`
+  - `disallowServiceAccountTokenCreator`
+  - `disallowServiceAccountUser`
 
 ### Changed
 
