@@ -17,6 +17,7 @@ import { notebooksPolicies } from './notebooks'
 import { pubsubPolicies } from './pubsub'
 import { projectsPolicies } from './projects'
 import { redisPolicies } from './redis'
+import { serviceaccountPolicies } from './serviceaccount'
 import { spannerPolicies } from './spanner'
 import { sqlPolicies } from './sql'
 import { storagePolicies } from './storage'
@@ -41,6 +42,7 @@ const allPolicies = [
 	...pubsubPolicies,
 	...projectsPolicies,
 	...redisPolicies,
+	...serviceaccountPolicies,
 	...spannerPolicies,
 	...sqlPolicies,
 	...storagePolicies,
