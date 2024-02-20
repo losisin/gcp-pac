@@ -11,12 +11,15 @@ import { containerPolicies } from './container'
 import { datafusionPolicies } from './datafusion'
 import { dataprocPolicies } from './dataproc'
 import { dnsPolicies } from './dns'
+import { folderPolicies } from './folder'
 import { kmsPolicies } from './kms'
 import { memcachePolicies } from './memcache'
 import { notebooksPolicies } from './notebooks'
+import { organizationsPolicies } from './organizations'
 import { pubsubPolicies } from './pubsub'
 import { projectsPolicies } from './projects'
 import { redisPolicies } from './redis'
+import { serviceaccountPolicies } from './serviceaccount'
 import { spannerPolicies } from './spanner'
 import { sqlPolicies } from './sql'
 import { storagePolicies } from './storage'
@@ -35,12 +38,15 @@ const allPolicies = [
 	...datafusionPolicies,
 	...dataprocPolicies,
 	...dnsPolicies,
+	...folderPolicies,
 	...kmsPolicies,
 	...memcachePolicies,
 	...notebooksPolicies,
+	...organizationsPolicies,
 	...pubsubPolicies,
 	...projectsPolicies,
 	...redisPolicies,
+	...serviceaccountPolicies,
 	...spannerPolicies,
 	...sqlPolicies,
 	...storagePolicies,

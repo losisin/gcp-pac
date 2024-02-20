@@ -8,7 +8,7 @@ export const requireApiKeyRestrictions = {
 		if (args.type === 'gcp:projects/apiKey:ApiKey') {
 			const restrictions = args.props.restrictions
 			if (!restrictions || Object.keys(restrictions).length === 0) {
-				reportViolation('Projects ApiKey should not be unrestricted.')
+				reportViolation('Projects ApiKey should be restricted.')
 			}
 		}
 	}
