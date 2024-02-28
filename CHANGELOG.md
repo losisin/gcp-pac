@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Bump @types/node from 20.11.20 to 20.11.21 [#91](https://github.com/losisin/gcp-pac/pull/91)
+
 ## [1.9.1] - 2024-02-27
 
 ### Changed
