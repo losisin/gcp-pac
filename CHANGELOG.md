@@ -7,9 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.9.2] - 2024-03-01
+
+### Fixed
+
+- Dependabot versioning strategy [#95](https://github.com/losisin/gcp-pac/pull/95)
+
 ### Changed
 
 - Bump @types/node from 20.11.20 to 20.11.21 [#91](https://github.com/losisin/gcp-pac/pull/91)
+- Bump @pulumi/pulumi from 3.107.0 to 3.108.0 [#93](https://github.com/losisin/gcp-pac/pull/93)
+- Bump @types/node from 20.11.22 to 20.11.24 [#94](https://github.com/losisin/gcp-pac/pull/94)
 
 ## [1.9.1] - 2024-02-27
 
