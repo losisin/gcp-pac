@@ -7,6 +7,7 @@ updates:
       - actions
     schedule:
       interval: daily
+    versioning-strategy: increase
 
   - package-ecosystem: npm
     directory: /
@@ -15,3 +16,4 @@ updates:
       - npm
     schedule:
       interval: daily
+    versioning-strategy: increase
