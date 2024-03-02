@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Dependabot versioning strategy [#96](https://github.com/losisin/gcp-pac/pull/96)
 
+### Changed
+
+- Bump @pulumi/pulumi from 3.108.0 to 3.108.1 [#97](https://github.com/losisin/gcp-pac/pull/97)
+
 ## [1.9.2] - 2024-03-01
 
 ### Fixed
