@@ -1,7 +1,7 @@
 import * as gcp from '@pulumi/gcp'
 
 export const bigqueryDataset = new gcp.bigquery.Dataset('fail#1', {
-	datasetId: 'my-dataset',
+	datasetId: 'my_dataset',
 	location: 'europe-west1',
 	deleteContentsOnDestroy: true
 })
