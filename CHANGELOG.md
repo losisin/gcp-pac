@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.9.4] - 2024-03-15
+
+### Removed
+
+- remove `notebooks` policies due to deprecation warning [#111](https://github.com/losisin/gcp-pac/pull/111)
+
 ### Changed
 
 - Update `npm` packages [#110](https://github.com/losisin/gcp-pac/pull/110)
