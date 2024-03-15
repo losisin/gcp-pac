@@ -14,7 +14,6 @@ import { dnsPolicies } from './dns'
 import { folderPolicies } from './folder'
 import { kmsPolicies } from './kms'
 import { memcachePolicies } from './memcache'
-import { notebooksPolicies } from './notebooks'
 import { organizationsPolicies } from './organizations'
 import { pubsubPolicies } from './pubsub'
 import { projectsPolicies } from './projects'
@@ -41,7 +40,6 @@ const allPolicies = [
 	...folderPolicies,
 	...kmsPolicies,
 	...memcachePolicies,
-	...notebooksPolicies,
 	...organizationsPolicies,
 	...pubsubPolicies,
 	...projectsPolicies,
