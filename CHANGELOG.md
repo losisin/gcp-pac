@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
-- remove `notebooks` policies due to deprecation warning [#111](https://github.com/losisin/gcp-pac/pull/111)
+- Remove `notebooks` policies due to deprecation warning [#111](https://github.com/losisin/gcp-pac/pull/111)
 
 ### Changed
 
