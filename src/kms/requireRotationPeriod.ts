@@ -8,12 +8,16 @@ export const requireRotationPeriod = {
 		if (args.type === 'gcp:kms/cryptoKey:CryptoKey') {
 			const purpose = args.props.purpose
 			const rotationPeriod = args.props.rotationPeriod
-			if ((purpose === undefined || !purpose.startsWith('ASYMMETRIC')) && rotationPeriod) {
-				const day = 86400
-				const time: number = parseInt(rotationPeriod.slice(0, -1))
-				if (time > 90 * day) {
-					reportViolation('KMS Crypto Key should be rotated every 90 days or less.')
+			if (rotationPeriod) {
+				if (!purpose || !purpose.startsWith('ASYMMETRIC')) {
+					const day = 86400
+					const time: number = parseInt(rotationPeriod.slice(0, -1))
+					if (time > 90 * day) {
+						reportViolation('KMS Crypto Key should be rotated every 90 days or less.')
+					}
 				}
+			} else {
+				reportViolation('KMS Crypto Key rotation period should be defined.')
 			}
 		}
 	}
