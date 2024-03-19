@@ -6,9 +6,9 @@
     },
     "dependencies": {
         "@pulumi/gcp": "^7.14.0",
-        "@pulumi/pulumi": "^3.111.0"
+        "@pulumi/pulumi": "^3.111.1"
     },
     "devDependencies": {
-        "@types/node": "^18.19.24"
+        "@types/node": "^18.19.26"
     }
 }
