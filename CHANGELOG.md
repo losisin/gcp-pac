@@ -7,12 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.9.5] - 2024-04-08
+
 ### Fixed
 
 - KMS CryptoKey rotation policy [#117](https://github.com/losisin/gcp-pac/pull/117)
 
 ### Changed
 
+- Update `npm` packages [#132](https://github.com/losisin/gcp-pac/pull/132)
 - Update `npm` packages [#118](https://github.com/losisin/gcp-pac/pull/118)
 
 ## [1.9.4] - 2024-03-15
