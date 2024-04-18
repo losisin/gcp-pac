@@ -7,9 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.9.8] - 2024-04-18
+
 ### Changed
 
 - Update CloudFunctions minimum supported runtime [#141] (https://github.com/losisin/gcp-pac/pull/141)
+- Update `npm` packages [#142](https://github.com/losisin/gcp-pac/pull/142)
 
 ## [1.9.7] - 2024-04-08
 
