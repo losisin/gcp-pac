@@ -20,7 +20,7 @@ export const disallowEndOfLifeRuntime = {
 						}
 						break
 					case 'python': // https://endoflife.date/python
-						if (version < 38) {
+						if (version < 39) {
 							reportViolation(message)
 						}
 						break
@@ -40,7 +40,7 @@ export const disallowEndOfLifeRuntime = {
 						}
 						break
 					case 'php':
-						if (version < 81) {
+						if (version < 82) {
 							// https://endoflife.date/php
 							reportViolation(message)
 						}
