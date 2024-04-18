@@ -5,10 +5,10 @@
         "test": "pulumi preview --stack dev --policy-pack ../dist/ --policy-pack-config policy.json --suppress-outputs --color always"
     },
     "dependencies": {
-        "@pulumi/gcp": "^7.16.0",
-        "@pulumi/pulumi": "^3.112.0"
+        "@pulumi/gcp": "^7.18.0",
+        "@pulumi/pulumi": "^3.113.0"
     },
     "devDependencies": {
-        "@types/node": "^18.19.30"
+        "@types/node": "^18.19.31"
     }
 }
