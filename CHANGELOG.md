@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Fix typo in 'storage-disallow-public-access' [#156](https://github.com/losisin/gcp-pac/pull/156)
+
 ### Changed
 
 - Update `npm` packages [#155](https://github.com/losisin/gcp-pac/pull/155)
