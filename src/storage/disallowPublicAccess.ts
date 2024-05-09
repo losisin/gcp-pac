@@ -2,7 +2,7 @@ import { ResourceValidationArgs, ReportViolation, EnforcementLevel } from '@pulu
 
 export const disallowPublicAccess = {
 	name: 'storage-disallow-public-access',
-	description: 'Check that Storage Bucket enforces public access access.',
+	description: 'Check that Storage Bucket enforces public access.',
 	enforcementLevel: 'advisory' as EnforcementLevel,
 	validateResource: (args: ResourceValidationArgs, reportViolation: ReportViolation) => {
 		if (args.type === 'gcp:storage/bucket:Bucket') {
