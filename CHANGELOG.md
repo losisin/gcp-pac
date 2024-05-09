@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.9.9] - 2024-05-09
+
 ### Fixed
 
 - Fix typo in 'storage-disallow-public-access' [#156](https://github.com/losisin/gcp-pac/pull/156)
