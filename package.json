@@ -41,7 +41,7 @@
     "@pulumi/policy": "^1.11.0"
   },
   "devDependencies": {
-    "@pulumi/pulumi": "^3.123.0",
+    "@pulumi/pulumi": "^3.126.0",
     "@types/node": "^20.14.10",
     "@typescript-eslint/eslint-plugin": "^7.16.0",
     "@typescript-eslint/parser": "^7.16.0",
