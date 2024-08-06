@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.9.13] - 2024-08-06
+
+### Changed
+
+- Update `npm` packages [#223](https://github.com/losisin/gcp-pac/pull/223)
+
 ### Fixed
 
 - Fix changelog [#203](https://github.com/losisin/gcp-pac/pull/203)
