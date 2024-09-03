@@ -44,7 +44,7 @@
     "@pulumi/pulumi": "^3.130.0",
     "@types/node": "^22.5.1",
     "@typescript-eslint/eslint-plugin": "^8.3.0",
-    "@typescript-eslint/parser": "^8.3.0",
+    "@typescript-eslint/parser": "^8.4.0",
     "@vercel/ncc": "^0.38.1",
     "eslint": "^8.57.0",
     "eslint-plugin-jsonc": "^2.16.0",
