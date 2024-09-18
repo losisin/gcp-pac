@@ -84,7 +84,7 @@ export const mysqlDatabaseFlags = new gcp.sql.DatabaseInstance('fail#5', {
 		ipConfiguration: {
 			ipv4Enabled: false,
 			privateNetwork: 'projects/my-project/global/networks/my-network',
-			requireSsl: true
+			sslMode: 'ENCRYPTED_ONLY'
 		},
 		backupConfiguration: {
 			enabled: true,
@@ -114,7 +114,7 @@ export const sqlserverDatabaseFlags = new gcp.sql.DatabaseInstance('fail#6', {
 		ipConfiguration: {
 			ipv4Enabled: false,
 			privateNetwork: 'projects/my-project/global/networks/my-network',
-			requireSsl: true
+			sslMode: 'ENCRYPTED_ONLY'
 		},
 		backupConfiguration: {
 			enabled: true,
@@ -164,7 +164,7 @@ export const postgresDatabaseFlags = new gcp.sql.DatabaseInstance('fail#7', {
 		ipConfiguration: {
 			ipv4Enabled: false,
 			privateNetwork: 'projects/my-project/global/networks/my-network',
-			requireSsl: true
+			sslMode: 'ENCRYPTED_ONLY'
 		},
 		backupConfiguration: {
 			enabled: true,
