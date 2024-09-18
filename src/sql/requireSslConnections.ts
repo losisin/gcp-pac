@@ -13,7 +13,10 @@ export const requireSslConnections = {
 				if (!ssl) {
 					reportViolation(message)
 				} else {
-					if (ssl === 'SSL_MODE_UNSPECIFIED' || ssl === 'ALLOW_UNENCRYPTED_AND_ENCRYPTED') {
+					if (
+						ssl === 'SSL_MODE_UNSPECIFIED' ||
+						ssl === 'ALLOW_UNENCRYPTED_AND_ENCRYPTED'
+					) {
 						reportViolation(message)
 					}
 				}
