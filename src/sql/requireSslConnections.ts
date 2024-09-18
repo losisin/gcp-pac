@@ -6,13 +6,19 @@ export const requireSslConnections = {
 	enforcementLevel: 'advisory' as EnforcementLevel,
 	validateResource: (args: ResourceValidationArgs, reportViolation: ReportViolation) => {
 		if (args.type === 'gcp:sql/databaseInstance:DatabaseInstance') {
+			const message = 'Cloud SQL Database Instance should accept only SSL connections.'
 			const settings = args.props.settings
 			if (settings) {
-				const ssl = settings.ipConfiguration?.requireSsl
+				const ssl = settings.ipConfiguration?.sslMode
 				if (!ssl) {
-					reportViolation(
-						'Cloud SQL Database Instance should accept only SSL connections.'
-					)
+					reportViolation(message)
+				} else {
+					if (
+						ssl === 'SSL_MODE_UNSPECIFIED' ||
+						ssl === 'ALLOW_UNENCRYPTED_AND_ENCRYPTED'
+					) {
+						reportViolation(message)
+					}
 				}
 			}
 		}
