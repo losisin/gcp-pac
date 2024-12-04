@@ -1,7 +1,7 @@
 import { ResourceValidationArgs, ReportViolation, EnforcementLevel } from '@pulumi/policy'
 
 export const disallowVpcConnectorPublicEgress = {
-	name: 'cloudrunfunctions-function-disallow-vpcconnector-public-egress',
+	name: 'cloudfunctions-function-disallow-vpcconnector-public-egress',
 	description: "Check that CloudFunctions function VPC connector doesn't allow public egress.",
 	enforcementLevel: 'advisory' as EnforcementLevel,
 	validateResource: (args: ResourceValidationArgs, reportViolation: ReportViolation) => {

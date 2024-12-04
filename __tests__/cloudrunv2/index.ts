@@ -27,7 +27,7 @@ export const cloudrunv2Service = new gcp.cloudrunv2.Service('fail#1', {
 	}
 })
 
-export const cloudrunv2SJob = new gcp.cloudrunv2.Job('fail#1', {
+export const cloudrunv2Job = new gcp.cloudrunv2.Job('fail#1', {
 	location: 'europe-west1',
 	template: {
 		template: {

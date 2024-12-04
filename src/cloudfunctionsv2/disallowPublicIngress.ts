@@ -1,7 +1,7 @@
 import { ResourceValidationArgs, ReportViolation, EnforcementLevel } from '@pulumi/policy'
 
 export const disallowPublicIngress = {
-	name: 'cloudrunfunctionsv2-function-disallow-public-ingress',
+	name: 'cloudfunctionsv2-function-disallow-public-ingress',
 	description: "Check that CloudFunctions function doesn't allow public ingress from 'all'.",
 	enforcementLevel: 'advisory' as EnforcementLevel,
 	validateResource: (args: ResourceValidationArgs, reportViolation: ReportViolation) => {
