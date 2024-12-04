@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Cloud Run V2 [#322](https://github.com/losisin/gcp-pac/pull/322)
+  - `cloudrunv2-service-require-deletion-protection`
+  - `cloudrunv2-job-require-deletion-protection`
+
 ### Changed
 
 - Update `npm` packages [#319](https://github.com/losisin/gcp-pac/pull/319)
