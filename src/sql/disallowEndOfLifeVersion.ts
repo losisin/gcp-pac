@@ -20,7 +20,7 @@ export const disallowEndOfLifeVersion = {
 						}
 						break
 					case 'POSTGRES': // https://endoflife.date/postgresql
-						if (version < 12) {
+						if (version < 13) {
 							reportViolation(message)
 						}
 						break
