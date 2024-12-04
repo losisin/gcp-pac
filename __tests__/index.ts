@@ -1,5 +1,3 @@
-import { datafusion, dataproc } from '@pulumi/gcp'
-
 export * as artifactregistry from './artifactregistry'
 export * as biguery from './bigquery'
 export * as bigtable from './bigtable'

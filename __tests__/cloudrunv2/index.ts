@@ -3,6 +3,7 @@ import * as gcp from '@pulumi/gcp'
 export const cloudrunv2Service = new gcp.cloudrunv2.Service('fail#1', {
 	location: 'europe-west1',
 	ingress: 'INGRESS_TRAFFIC_ALL',
+	deletionProtection: false,
 	template: {
 		containers: [
 			{
@@ -29,6 +30,7 @@ export const cloudrunv2Service = new gcp.cloudrunv2.Service('fail#1', {
 
 export const cloudrunv2Job = new gcp.cloudrunv2.Job('fail#1', {
 	location: 'europe-west1',
+	deletionProtection: false,
 	template: {
 		template: {
 			containers: [
