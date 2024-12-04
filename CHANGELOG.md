@@ -14,7 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Fix typo in 'storage-disallow-public-access' [#318](https://github.com/losisin/gcp-pac/pull/318)
+- Fix various typos [#318](https://github.com/losisin/gcp-pac/pull/318)
 
 ## [1.9.15] - 2024-09-18
 
