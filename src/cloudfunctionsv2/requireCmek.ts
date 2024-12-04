@@ -1,7 +1,7 @@
 import { ResourceValidationArgs, ReportViolation, EnforcementLevel } from '@pulumi/policy'
 
 export const requireCmek = {
-	name: 'cloudrunfunctionsv2-function-require-cmek',
+	name: 'cloudfunctionsv2-function-require-cmek',
 	description: 'Check that CloudFunctions function use CMEK.',
 	enforcementLevel: 'advisory' as EnforcementLevel,
 	validateResource: (args: ResourceValidationArgs, reportViolation: ReportViolation) => {

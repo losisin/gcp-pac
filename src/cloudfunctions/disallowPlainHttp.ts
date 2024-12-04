@@ -1,7 +1,7 @@
 import { ResourceValidationArgs, ReportViolation, EnforcementLevel } from '@pulumi/policy'
 
 export const disallowPlainHttp = {
-	name: 'cloudrunfunctions-function-disallow-plain-http',
+	name: 'cloudfunctions-function-disallow-plain-http',
 	description: "Check that CloudFunctions function don't accept plain 'HTTP'.",
 	enforcementLevel: 'advisory' as EnforcementLevel,
 	validateResource: (args: ResourceValidationArgs, reportViolation: ReportViolation) => {

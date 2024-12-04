@@ -1,7 +1,7 @@
 import { ResourceValidationArgs, ReportViolation, EnforcementLevel } from '@pulumi/policy'
 
 export const disallowEnvsSecrets = {
-	name: 'cloudrunfunctions-function-disallow-envs-secrets',
+	name: 'cloudfunctions-function-disallow-envs-secrets',
 	description:
 		'Check that CloudFunctions function does not use environment variables from secrets.',
 	enforcementLevel: 'advisory' as EnforcementLevel,

@@ -1,7 +1,7 @@
 import { ResourceValidationArgs, ReportViolation, EnforcementLevel } from '@pulumi/policy'
 
 export const disallowEndOfLifeRuntime = {
-	name: 'cloudrunfunctions-function-disallow-end-of-life-runtime',
+	name: 'cloudfunctions-function-disallow-end-of-life-runtime',
 	description: 'Check that CloudFunctions function does not use end-of-life runtime.',
 	enforcementLevel: 'advisory' as EnforcementLevel,
 	validateResource: (args: ResourceValidationArgs, reportViolation: ReportViolation) => {
