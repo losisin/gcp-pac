@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Update `npm` packages [#319](https://github.com/losisin/gcp-pac/pull/319)
+- Group dependabot updates [#317](https://github.com/losisin/gcp-pac/pull/317)
+
+### Fixed
+
+- Fix typo in 'storage-disallow-public-access' [#318](https://github.com/losisin/gcp-pac/pull/318)
+
 ## [1.9.15] - 2024-09-18
 
 ### Changed
