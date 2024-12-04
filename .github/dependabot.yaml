@@ -6,7 +6,12 @@ updates:
       - dependabot
       - actions
     schedule:
-      interval: daily
+      interval: weekly
+    groups:
+      actions-minor:
+        update-types:
+          - minor
+          - patch
 
   - package-ecosystem: npm
     directory: /
@@ -14,5 +19,10 @@ updates:
       - dependabot
       - npm
     schedule:
-      interval: daily
+      interval: weekly
     versioning-strategy: increase
+    groups:
+      npm-minor:
+        update-types:
+          - minor
+          - patch
