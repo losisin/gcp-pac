@@ -99,7 +99,10 @@ export const mysqlDatabaseFlags = new gcp.sql.DatabaseInstance('fail#5', {
 				name: 'skip_show_database',
 				value: 'off'
 			}
-		]
+		],
+		passwordValidationPolicy: {
+			enablePasswordPolicy: true
+		}
 	}
 })
 
@@ -149,7 +152,10 @@ export const sqlserverDatabaseFlags = new gcp.sql.DatabaseInstance('fail#6', {
 				name: 'contained database authentication',
 				value: 'on'
 			}
-		]
+		],
+		passwordValidationPolicy: {
+			enablePasswordPolicy: true
+		}
 	}
 })
 
@@ -195,6 +201,9 @@ export const postgresDatabaseFlags = new gcp.sql.DatabaseInstance('fail#7', {
 				name: 'cloudsql.enable_pgaudit',
 				value: 'off'
 			}
-		]
+		],
+		passwordValidationPolicy: {
+			enablePasswordPolicy: true
+		}
 	}
 })

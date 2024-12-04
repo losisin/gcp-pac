@@ -6,6 +6,7 @@ import { requireAutomatedBackup } from './requireAutomatedBackup'
 import { requireCmek } from './requireCmek'
 import { requireDeletionProtection } from './requireDeletionProtection'
 import { requireHighAvailability } from './requireHighAvailability'
+import { requirePasswordValidationPolicy } from './requirePasswordValidationPolicy'
 import { requirePointInTimeRecovery } from './requirePointInTimeRecovery'
 import { requireSslConnections } from './requireSslConnections'
 import { mysqlPolicies } from './mysql'
@@ -24,6 +25,7 @@ export const sqlPolicies = [
 	requireCmek,
 	requireDeletionProtection,
 	requireHighAvailability,
+	requirePasswordValidationPolicy,
 	requirePointInTimeRecovery,
 	requireSslConnections
 ]

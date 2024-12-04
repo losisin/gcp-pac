@@ -12,11 +12,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Cloud Run V2 [#322](https://github.com/losisin/gcp-pac/pull/322)
   - `cloudrunv2-service-require-deletion-protection`
   - `cloudrunv2-job-require-deletion-protection`
+- Cloud SQL [#323](https://github.com/losisin/gcp-pac/pull/323)
+  - `sql-require-password-validation-policy`
 
 ### Changed
 
 - Update `npm` packages [#319](https://github.com/losisin/gcp-pac/pull/319)
 - Group dependabot updates [#317](https://github.com/losisin/gcp-pac/pull/317)
+- Drop PostgreSQL 12 [#323](https://github.com/losisin/gcp-pac/pull/323)
 
 ### Fixed
 
