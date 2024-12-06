@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.10.0] - 2024-12-06
+
 ### Added
 
 - Cloud Run V2 [#322](https://github.com/losisin/gcp-pac/pull/322)
