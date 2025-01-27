@@ -40,17 +40,17 @@
     "@pulumi/policy": "^1.13.0"
   },
   "devDependencies": {
-    "@pulumi/pulumi": "^3.143.0",
-    "@types/node": "^22.10.2",
-    "@typescript-eslint/eslint-plugin": "^8.18.0",
-    "@typescript-eslint/parser": "^8.18.0",
+    "@pulumi/pulumi": "^3.147.0",
+    "@types/node": "^22.10.10",
+    "@typescript-eslint/eslint-plugin": "^8.21.0",
+    "@typescript-eslint/parser": "^8.21.0",
     "@vercel/ncc": "^0.38.3",
     "eslint": "^8.57.1",
-    "eslint-plugin-jsonc": "^2.18.2",
-    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-jsonc": "^2.19.1",
+    "eslint-plugin-prettier": "^5.2.3",
     "js-yaml": "^4.1.0",
     "prettier": "^3.4.2",
     "prettier-eslint": "^16.3.0",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.3"
   }
 }
