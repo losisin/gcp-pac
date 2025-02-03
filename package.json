@@ -40,10 +40,10 @@
     "@pulumi/policy": "^1.13.0"
   },
   "devDependencies": {
-    "@pulumi/pulumi": "^3.147.0",
-    "@types/node": "^22.10.10",
-    "@typescript-eslint/eslint-plugin": "^8.21.0",
-    "@typescript-eslint/parser": "^8.21.0",
+    "@pulumi/pulumi": "^3.148.0",
+    "@types/node": "^22.13.0",
+    "@typescript-eslint/eslint-plugin": "^8.22.0",
+    "@typescript-eslint/parser": "^8.22.0",
     "@vercel/ncc": "^0.38.3",
     "eslint": "^8.57.1",
     "eslint-plugin-jsonc": "^2.19.1",
