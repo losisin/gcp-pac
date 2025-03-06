@@ -7,7 +7,8 @@ export const requireBucketVersioning = {
 	validateResource: (args: ResourceValidationArgs, reportViolation: ReportViolation) => {
 		if (args.type === 'gcp:storage/bucket:Bucket') {
 			const versioning = args.props.versioning
-			if (!versioning || !versioning.enabled) {
+			const hierarchicalNamespace = args.props.hierarchicalNamespace?.enabled
+			if (!hierarchicalNamespace && (!versioning || !versioning.enabled)) {
 				reportViolation('Storage Bucket should have versioning enabled.')
 			}
 		}
