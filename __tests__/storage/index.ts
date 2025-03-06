@@ -17,7 +17,7 @@ export const storageBucket1 = new gcp.storage.Bucket('fail#1', {
 export const storageBucket2 = new gcp.storage.Bucket('fail#2', {
 	name: 'my-bucket',
 	location: 'europe-west1',
-    hierarchicalNamespace: {
-        enabled: true,
-    },
+	hierarchicalNamespace: {
+		enabled: true
+	}
 })
