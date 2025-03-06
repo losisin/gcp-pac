@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Fix CI workflow status badge [#342](https://github.com/losisin/gcp-pac/pull/342)
+
 ## [1.10.2] - 2025-03-06
 
 ### Changed
