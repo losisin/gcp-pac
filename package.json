@@ -11,7 +11,7 @@
   "homepage": "https://github.com/losisin/gcp-pac",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/losisin/gcp-pac.git"
+    "url": "https://github.com/losisin/gcp-pac"
   },
   "bugs": {
     "url": "https://github.com/losisin/gcp-pac/issues"
