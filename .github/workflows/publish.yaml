@@ -35,4 +35,4 @@ jobs:
 
       - name: Publish to NPM
         id: npm-publish
-        run: npm publish dist --access public
+        run: npm run publish

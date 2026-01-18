@@ -34,7 +34,7 @@
     "package": "ncc build src/index.ts -e @pulumi/pulumi -e google-protobuf -e protobufjs -e @grpc/grpc-js --minify --out dist/",
     "package:watch": "npm run package -- --watch",
     "bundle": "npm run package && node scripts/setup.mjs",
-    "publish": "npm publish --access public dist/"
+    "publish": "npm publish ./dist --access public"
   },
   "dependencies": {
     "@pulumi/policy": "^1.20.0"
