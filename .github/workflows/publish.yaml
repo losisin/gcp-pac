@@ -4,6 +4,10 @@ on:
   release:
     types: [published]
 
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
   publish:
     name: Publish to NPM
@@ -20,6 +24,7 @@ jobs:
         with:
           node-version: 20
           cache: npm
+          registry-url: https://registry.npmjs.org
 
       - name: Install Dependencies
         id: npm-ci
@@ -31,7 +36,4 @@ jobs:
 
       - name: Publish to NPM
         id: npm-publish
-        uses: JS-DevTools/npm-publish@v4
-        with:
-          token: ${{secrets.NPM_TOKEN}}
-          package: dist
+        run: npm publish dist/
