@@ -46,7 +46,7 @@
     "@typescript-eslint/parser": "^8.53.0",
     "@vercel/ncc": "^0.38.4",
     "eslint": "^8.57.1",
-    "eslint-plugin-jsonc": "^2.21.0",
+    "eslint-plugin-jsonc": "^3.3.0",
     "eslint-plugin-prettier": "^5.5.5",
     "js-yaml": "^4.1.1",
     "prettier": "^3.8.1",
